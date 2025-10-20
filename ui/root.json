@@ -110,7 +110,7 @@
       "url": "https://github.com/krsofficial/tetralegends/"
     },
 	{
-      "string": "OTHER PROJECTS",
+      "label": "OTHER PROJECTS",
       "fixedText": true,
       "type": "overline"
     },
