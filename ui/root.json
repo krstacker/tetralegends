@@ -98,11 +98,28 @@
       "submenu": "settings"
     },
 	{
+      "string": "miscOverline",
+      "label": "Misc",
+      "type": "overline"
+    },
+	{
       "fixedText": true,
       "label": "GitHub Repository",
-      "description": "Go to the GitHub Repository of Tetra Legends Ace",
+      "description": "Go to the GitHub Repository of Tetra Legends OE",
       "action": "link",
-      "url": "https://github.com/Sub2Ninah/tetralegends/"
+      "url": "https://github.com/krsofficial/tetralegends/"
+    },
+	{
+      "string": "OTHER PROJECTS",
+      "fixedText": true,
+      "type": "overline"
+    },
+	{
+      "fixedText": true,
+      "label": "KRS",
+      "description": "Arcade stacker that adds a twist to the puzzle's formula.",
+      "action": "link",
+      "url": "https://krsofficial.github.io/krs/"
     }
   ]
 }
