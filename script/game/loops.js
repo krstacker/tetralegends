@@ -4694,6 +4694,7 @@ export const loops = {
 	  game.timePassedOffset = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
+	  game.ace = true
     },
   },
   aceworld: {
@@ -5358,6 +5359,7 @@ export const loops = {
 	  game.timePassedOffset = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
+	  game.ace = true
     },
   },
   zen: {

@@ -101,6 +101,7 @@ export default class Game {
     this.startedOnPaceEvent = false
     this.background = ""
 	this.loadedSoundbank = ""
+	this.ace = false
     this.stat = {
       b2b: 0,
       pcCount: 0,
@@ -1020,7 +1021,11 @@ export default class Game {
             if (!game.piece.inAre) {
               game.timePassed += msPassed
             } else if (game.piece.startingAre >= game.piece.startingAreLimit) {
-              game.timePassedAre += msPassed
+              if (game.ace) {
+				  game.timePassed += msPassed
+			  } else {
+				  game.timePassedAre += msPassed
+			  }
             }
 
             // GOALS
