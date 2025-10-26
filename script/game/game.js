@@ -1056,7 +1056,7 @@ export default class Game {
             if (game.timeGoal != null) {
               if (
                 (game.rtaLimit
-                  ? game.timePassed + game.timePassedAre
+                  ? game.timePassed + game.timePassedOffset + game.timePassedAre
                   : game.timePassed) >= game.timeGoal
               ) {
                 game.timeGoal = null
@@ -1199,7 +1199,7 @@ export default class Game {
             $("#timer-real").innerHTML = locale.getString(
               "ui",
               "realTimeAttack",
-              [msToTime(game.timePassed + game.timePassedAre)]
+              [msToTime(game.timePassed + game.timePassedOffset + game.timePassedAre)]
             )
           }
         } else {
@@ -1209,7 +1209,7 @@ export default class Game {
           $("#timer-real").innerHTML = locale.getString(
             "ui",
             "realTimeAttack",
-            [msToTime(game.timePassed + game.timePassedAre)]
+            [msToTime(game.timePassed + game.timePassedOffset + game.timePassedAre)]
           )
         }
         game.last = game.now
