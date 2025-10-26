@@ -479,7 +479,20 @@ export default class Game {
             )}:</b> ×${this.maxb2b - 1 < 0 ? 0 : this.maxb2b - 1}<br>`
           break
         case "piece":
-          $("#end-stats").innerHTML += `<b>${locale.getString(
+          if (gameHandler.game.ace) {
+		  $("#end-stats").innerHTML += `<b>${locale.getString(
+            "ui",
+            "piece"
+          )}:</b> ${this.stat["piece"]}<br>`
+          $("#end-stats").innerHTML += `<b>Avg. PPS:</b> ${
+            Math.round(
+              (gameHandler.game.stat.piece /
+                ((gameHandler.game.timePassed - gameHandler.game.timePassedAre + gameHandler.game.timePassedOffset) / 1000)) *
+                100
+            ) / 100
+          }<br>`
+		  } else {
+		  $("#end-stats").innerHTML += `<b>${locale.getString(
             "ui",
             "piece"
           )}:</b> ${this.stat["piece"]}<br>`
@@ -490,6 +503,7 @@ export default class Game {
                 100
             ) / 100
           }<br>`
+		  }
           break
         case "pcCount":
           $("#end-stats").innerHTML += `<b>${locale.getString(
@@ -1021,10 +1035,9 @@ export default class Game {
             if (!game.piece.inAre) {
               game.timePassed += msPassed
             } else if (game.piece.startingAre >= game.piece.startingAreLimit) {
+			  game.timePassedAre += msPassed
               if (game.ace) {
 				  game.timePassed += msPassed
-			  } else {
-				  game.timePassedAre += msPassed
 			  }
             }
 
@@ -1056,7 +1069,11 @@ export default class Game {
                 game.end()
               }
             }
-            game.pps = game.stat.piece / ((game.timePassed + game.timePassedOffset) / 1000)
+            if (game.ace) {
+				game.pps = game.stat.piece / ((game.timePassed - game.timePassedAre + game.timePassedOffset) / 1000)
+			} else {
+				game.pps = game.stat.piece / ((game.timePassed + game.timePassedOffset) / 1000)
+			}
             // game.stat.pps = Math.round(game.pps * 100) / 100;
             game.updateStats()
             if (game.stack.alarmIsOn) {
