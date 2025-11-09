@@ -992,19 +992,19 @@ body {
   from {
     filter:
 	brightness(100%)
-	drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
-    drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
-    drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
-    drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
+	drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
+    drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
+    drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
+    drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
   }
 
   to {
     filter:
 	brightness(800%)
-	drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
-    drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
-    drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
-    drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
+	drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
+    drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
+    drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
+    drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
   }
 }
 
@@ -1012,19 +1012,19 @@ body {
   from {
     filter:
 	brightness(100%)
-	drop-shadow(3px 3px 0px rgba(255,255,255,0.25))
-    drop-shadow(-3px -3px 0px rgba(255,255,255,0.25))
-    drop-shadow(3px -3px 0px rgba(255,255,255,0.25))
-    drop-shadow(-3px 3px 0px rgba(255,255,255,0.25))
+	drop-shadow(0.2em 0.2em 0em rgba(255,255,255,0.25))
+    drop-shadow(-0.2em -0.2em 0em rgba(255,255,255,0.25))
+    drop-shadow(0.2em -0.2em 0em rgba(255,255,255,0.25))
+    drop-shadow(-0.2em 0.2em 0em rgba(255,255,255,0.25))
   }
 
   to {
     filter:
 	brightness(800%)
-	drop-shadow(3px 3px 0px rgba(255,255,255,0.25))
-    drop-shadow(-3px -3px 0px rgba(255,255,255,0.25))
-    drop-shadow(3px -3px 0px rgba(255,255,255,0.25))
-    drop-shadow(-3px 3px 0px rgba(255,255,255,0.25))
+	drop-shadow(0.2em 0.2em 0em rgba(255,255,255,0.25))
+    drop-shadow(-0.2em -0.2em 0em rgba(255,255,255,0.25))
+    drop-shadow(0.2em -0.2em 0em rgba(255,255,255,0.25))
+    drop-shadow(-0.2em 0.2em 0em rgba(255,255,255,0.25))
   }
 }
 
@@ -1475,28 +1475,28 @@ body[theme="tetrjs"] .game-center {
 
 .stack-canvas {
   filter: 
-  drop-shadow(3px 3px 0px rgba(255,255,255,0.25))
-  drop-shadow(-3px -3px 0px rgba(255,255,255,0.25))
-  drop-shadow(3px -3px 0px rgba(255,255,255,0.25))
-  drop-shadow(-3px 3px 0px rgba(255,255,255,0.25))
+  drop-shadow(0.2em 0.2em 0em rgba(255,255,255,0.25))
+  drop-shadow(-0.2em -0.2em 0em rgba(255,255,255,0.25))
+  drop-shadow(0.2em -0.2em 0em rgba(255,255,255,0.25))
+  drop-shadow(-0.2em 0.2em 0em rgba(255,255,255,0.25))
   ;
 }
 
 .stack-canvas.outlineoff {
   filter: 
-  drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
-  drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
-  drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
-  drop-shadow(0px 0px 0px rgba(255,255,255,0.25))
+  drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
+  drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
+  drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
+  drop-shadow(0em 0em 0em rgba(255,255,255,0.25))
   ;
 }
 
 .stack-canvas.invis {
   filter: 
-  drop-shadow(0px 0px 0px rgba(255,255,255,0))
-  drop-shadow(0px 0px 0px rgba(255,255,255,0))
-  drop-shadow(0px 0px 0px rgba(255,255,255,0))
-  drop-shadow(0px 0px 0px rgba(255,255,255,0))
+  drop-shadow(0em 0em 0em rgba(255,255,255,0))
+  drop-shadow(0em 0em 0em rgba(255,255,255,0))
+  drop-shadow(0em 0em 0em rgba(255,255,255,0))
+  drop-shadow(0em 0em 0em rgba(255,255,255,0))
   ;
   opacity: 0.25;
 }
