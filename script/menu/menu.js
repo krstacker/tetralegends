@@ -66,8 +66,9 @@ class Menu {
       if (
         (gameHandler.game.isDead || gameHandler.game.isOver || gameHandler.game.isDead == null) &&
         !this.skipMusicChange &&
-        this.current.properties.game !== "beat" &&
-		this.current.properties.game.includes("beat") !== true
+        this.current.properties.game !== "beat"
+		&& this.current.properties.game !== "beatx"
+		&& this.current.properties.game !== "beattgm"
       ) {
         if (this.current.properties.pgmusic) {
           if (sound.bgmName !== `menu-${this.current.properties.pgmusic}`) {
@@ -169,7 +170,8 @@ class Menu {
       }
       if (
         (this.current.properties.game === "beat" 
-		|| this.current.properties.game.includes("beat")) &&
+		|| this.current.properties.game === "beatx"
+		|| this.current.properties.game === "beattgm") &&
         sound.bgmName !== `menu-pg-${settings.game.beat.song}`
       ) {
         sound.killBgm()
@@ -646,7 +648,8 @@ class Menu {
 
             if (
               (this.current.properties.game === "beat" 
-			  || this.current.properties.game.includes("beat")) &&
+			  || this.current.properties.game === "beatx"
+			  || this.current.properties.game === "beattgm") &&
               (gameHandler.game.b2b == null ||
                 gameHandler.game.isOver == true ||
                 gameHandler.game.isPaused == false) &&
