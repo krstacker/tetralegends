@@ -8091,6 +8091,10 @@ export const loops = {
 			  gravityMultiplier = 300
 			  break
 		  }
+		  case 5: {
+			  gravityMultiplier = 1000000000
+			  break
+		  }
 	  }
       game.piece.gravity = Math.max(gravityEquation * gravityMultiplier, framesToMs(1))
       game.piece.lockDelayLimit = 500

@@ -40,6 +40,12 @@
 		  "description": "",
           "fixedText": true,
           "value": 4
+        },
+		{
+          "label": "EXTREME",
+		  "description": "",
+          "fixedText": true,
+          "value": 5
         }
       ],
       "setting": "difficulty",
