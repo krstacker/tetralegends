@@ -3,7 +3,7 @@
     "parent": "beatmode",
     "parentSecret": true,
     "langOverride": "mode-options",
-    "game": "beat"
+    "game": "beattgm"
   },
   "data": [
     {

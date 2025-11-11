@@ -5446,12 +5446,21 @@ export const loops = {
       }
       gravity(arg)
       softDrop(arg)
-      if (input.getGamePress("hardDrop")) {
+      if (gameHandler.game.type === "beattgm") {
+	  if (input.getGamePress("softDrop")) {
         if (!arg.piece.isFrozen) {
           sound.add("lockforce")
         }
         arg.piece.isFrozen = true
       }
+	  } else {
+	  if (input.getGamePress("hardDrop")) {
+        if (!arg.piece.isFrozen) {
+          sound.add("lockforce")
+        }
+        arg.piece.isFrozen = true
+      }
+	  }
       while (game.beatTime > bpmToMs(bpm)) {
         arg.piece.hardDrop()
         respawn = true
@@ -8133,3 +8142,5 @@ export const loops = {
     },
   },
 }
+loops.beatx = loops.beat
+loops.beattgm = loops.beat

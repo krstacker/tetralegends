@@ -53,6 +53,13 @@
       "action": "submenu",
       "submenu": "arcadeace"
     },
+	{
+      "label": "Beat",
+      "description": "PPS is forced to the beat of the music! Good luck!",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "beatmode"
+    },
     {
       "fixedText": true,
       "label": "Zen",

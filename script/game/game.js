@@ -314,7 +314,7 @@ export default class Game {
 
         sound.killBgm()
 
-        if (gametype === "beat") {
+        if (gametype === "beat" || gametype.includes("beat")) {
           this.settings.music = settings.game.beat.song
         }
 		
@@ -405,7 +405,7 @@ export default class Game {
     }
   }
   pause() {
-    if (this.type === "nontwo" || this.type === "beat") {
+    if (this.type === "nontwo" || this.type === "beat" || this.type.includes("beat")) {
       return
     }
     if (this.isPaused || this.noUpdate) {
@@ -422,7 +422,7 @@ export default class Game {
     }
   }
   hide() {
-    if (this.type === "nontwo" || this.type === "beat") this.die()
+    if (this.type === "nontwo" || this.type === "beat" || this.type.includes("beat")) this.die()
     $("#game-container").classList.add("hidden")
     this.isVisible = false
   }
