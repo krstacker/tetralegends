@@ -7318,7 +7318,10 @@ export const loops = {
       updateLasts(arg)
     },
     onPieceSpawn: (game) => {
-      game.stat.level = Math.floor(game.stat.line / 10 + 1)
+      game.stat.level = Math.max(
+		settings.game.standardx.startingLevel,
+		Math.floor(game.stat.line / 10 + 1)
+	  )
       const x = game.stat.level
       const gravityEquation = (0.9 - (x - 1) * 0.001) ** (x - 1)
       game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
@@ -7340,8 +7343,8 @@ export const loops = {
       levelUpdate(game)
     },
     onInit: (game) => {
-      game.stat.level = 1
-      lastLevel = 1
+      game.stat.level = settings.game.standardx.startingLevel
+      lastLevel = parseInt(settings.game.standardx.startingLevel)
       game.piece.gravity = 1000
       updateFallSpeed(game)
 	  game.musicProgression = 0

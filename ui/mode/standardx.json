@@ -12,6 +12,18 @@
       "type": "header"
     },
 	{
+      "string": "startingLevelLabel",
+      "stringDesc": "startingLevelDescription",
+      "type": "slider",
+      "action": "slider",
+      "max": 40,
+      "min": 1,
+      "discrete": 1,
+      "setting": "startingLevel",
+      "gameName": "prox",
+      "settingType": "game"
+    },
+	{
       "string": "lockdownModeLabel",
       "stringDesc": "lockdownModeDescription",
       "type": "select",

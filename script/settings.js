@@ -156,6 +156,7 @@ class Settings {
 		music: "typea",
       },
 	  standardx: {
+		startingLevel: 1,
         lockdownMode: "classic",
       },
       prox: {
