@@ -10,7 +10,7 @@
     "skin": "standard",
     "soundbank": "standard",
     "music": "master",
-    "hasDangerBgm": true,
+	"hasDangerBgm": true,
     "scoreTable": "guideline",
     "background": "marathon.jpg",
     "isHardMode": true

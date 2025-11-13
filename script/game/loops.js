@@ -7329,6 +7329,27 @@ export const loops = {
       } else {
         game.piece.lockDelayLimit = 500
       }
+	  if (game.stat.level >= 8 && game.musicProgression < 1) {
+		if (game.stat.piece > 0) {
+          sound.killBgm()
+          sound.playBgm(game.settings.music[1], game.type)
+		  game.musicProgression = 1
+        }
+      }
+	  if (game.stat.level >= 32 && game.musicProgression < 2) {
+		if (game.stat.piece > 0) {
+          sound.killBgm()
+          sound.playBgm(game.settings.music[2], game.type)
+		  game.musicProgression = 2
+        }
+      }
+	  if (game.stat.level >= 40 && game.musicProgression < 3) {
+		if (game.stat.piece > 0) {
+          sound.killBgm()
+          sound.playBgm(game.settings.music[3], game.type)
+		  game.musicProgression = 3
+        }
+      }
       updateFallSpeed(game)
       levelUpdate(game)
     },
@@ -7337,6 +7358,7 @@ export const loops = {
       lastLevel = 1
       game.piece.gravity = 1000
       updateFallSpeed(game)
+	  game.musicProgression = 0
       game.updateStats()
     },
   },
