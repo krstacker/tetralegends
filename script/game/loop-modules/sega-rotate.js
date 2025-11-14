@@ -1,16 +1,4 @@
 import input from "../../input.js"
-import {
-  PIECES,
-  MONOMINO_PIECES,
-  DOMINO_PIECES,
-  TROMINO_PIECES,
-  PENTOMINO_PIECES,
-  SPAWN_OFFSETS,
-  KICK_TABLES,
-  INITIAL_ORIENTATION,
-  PIECE_OFFSETS,
-  SPIN_POINTS,
-} from "../../consts.js"
 
 export default function segaRotate(arg) {
   /*if (piece.y + 1 < 4 && piece.shape === "I") {
@@ -19,18 +7,15 @@ export default function segaRotate(arg) {
 	  return
   }*/
   const piece = arg.piece
-  let rotationSystem = piece.parent.rotationSystem
   let pieceShape = piece.shape
-  let downShift = SPAWN_OFFSETS[rotationSystem][downShift]
-  let yShift = SPAWN_OFFSETS[rotationSystem][pieceShape][1]
-  let spawnY = downShift - yShift
+  let spawnY = piece.lowestY
   let pieceY = piece.y + spawnY
   if (pieceShape === "I") {
-	  if (pieceY <= spawnY + 2) {
+	  if (pieceY < spawnY + 2) {
 		  return
 	  }
   } else {
-	  if (pieceY <= spawnY + 1) {
+	  if (pieceY < spawnY + 1) {
 		  return
 	  }
   }

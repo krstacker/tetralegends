@@ -884,9 +884,11 @@ export const loops = {
 				game.stack.isHidden = false
 			  }
 			  rtaGoal = game.rta + 55000
-			  sound.loadBgm(["ending"], "tap")
-			  sound.killBgm()
-			  sound.playBgm(["ending"], "tap")
+			  if (game.musicProgression > 0) {
+				sound.loadBgm(["ending"], "tap")
+				sound.killBgm()
+				sound.playBgm(["ending"], "tap")
+			  }
 		  } else if (isEndRoll === true) {
 			  if (game.rta >= rtaGoal) {
 			  endRollPassed = true
@@ -1245,6 +1247,12 @@ export const loops = {
       game.stat.initPieces = 2
       game.appends.level = `<span class="small">/300</span>`
       updateFallSpeed(game)
+	  if (game.settings.rotationSystem === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
+	  }
+	  if (settings.settings.soundbank === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
+	  }
       game.updateStats()
     },
   },
@@ -1552,9 +1560,11 @@ export const loops = {
 				game.stack.isHidden = false
 			}
 			rtaGoal = game.rta + 55000
-			sound.loadBgm(["ending2"], "arcade")
-			sound.killBgm()
-			sound.playBgm(["ending2"], "arcade")
+			if (game.musicProgression > 0) {
+				sound.loadBgm(["ending2"], "arcade")
+				sound.killBgm()
+				sound.playBgm(["ending2"], "arcade")
+			}
 		} else if (isEndRoll === true) {
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
@@ -1838,9 +1848,11 @@ export const loops = {
 			game.stack.isFading = true
 			game.stack.endRollStart()
 			rtaGoal = game.rta + 55000
-			sound.loadBgm(["ending1"], "arcade")
-			sound.killBgm()
-			sound.playBgm(["ending1"], "arcade")
+			if (game.useHeboMusic) {
+				sound.loadBgm(["ending1"], "arcade")
+				sound.killBgm()
+				sound.playBgm(["ending1"], "arcade")
+			}
 		  } else if (isEndRoll === true) {
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
@@ -1924,6 +1936,7 @@ export const loops = {
       updateFallSpeed(game)
     },
     onInit: (game) => {
+	  game.useHeboMusic = false
       game.stat.level = 0
       game.rta = 0
 	  isEndRoll = false
@@ -1934,6 +1947,14 @@ export const loops = {
       game.stat.initPieces = 2
       updateFallSpeed(game)
       game.updateStats()
+	  if (game.settings.rotationSystem === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
+		  game.useHeboMusic = true
+	  }
+	  if (settings.settings.soundbank === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
+		  game.useHeboMusic = true
+	  }
 	  game.stack.isFading = false
     },
   },
@@ -2239,9 +2260,11 @@ export const loops = {
 				game.stack.isHidden = false
 			}
 			rtaGoal = game.rta + 55000
-			sound.loadBgm(["ending2"], "arcade")
-			sound.killBgm()
-			sound.playBgm(["ending2"], "arcade")
+			if (game.musicProgression > 0) {
+				sound.loadBgm(["ending2"], "arcade")
+				sound.killBgm()
+				sound.playBgm(["ending2"], "arcade")
+			}
 		} else if (isEndRoll === true) {
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
@@ -2525,9 +2548,11 @@ export const loops = {
 			game.stack.isFading = true
 			game.stack.endRollStart()
 			rtaGoal = game.rta + 55000
-			sound.loadBgm(["ending1"], "arcade")
-			sound.killBgm()
-			sound.playBgm(["ending1"], "arcade")
+			if (game.useHeboMusic) {
+				sound.loadBgm(["ending1"], "arcade")
+				sound.killBgm()
+				sound.playBgm(["ending1"], "arcade")
+			}
 		  } else if (isEndRoll === true) {
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
@@ -2611,6 +2636,7 @@ export const loops = {
 	  updateFallSpeed(game)
     },
     onInit: (game) => {
+	  game.useHeboMusic = false
       game.stat.level = 0
       game.rta = 0
       game.isRaceMode = true
@@ -2621,6 +2647,14 @@ export const loops = {
       game.stat.initPieces = 2
       updateFallSpeed(game)
       game.updateStats()
+	  if (game.settings.rotationSystem === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
+		  game.useHeboMusic = true
+	  }
+	  if (settings.settings.soundbank === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
+		  game.useHeboMusic = true
+	  }
 	  game.stack.isFading = false
     },
   },
