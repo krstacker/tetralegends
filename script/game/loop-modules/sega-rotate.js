@@ -26,11 +26,11 @@ export default function segaRotate(arg) {
   let spawnY = downShift - yShift
   let pieceY = piece.y + spawnY
   if (pieceShape === "I") {
-	  if (pieceY <= spawnY + 1) {
+	  if (pieceY <= spawnY + 2) {
 		  return
 	  }
   } else {
-	  if (pieceY <= spawnY) {
+	  if (pieceY <= spawnY + 1) {
 		  return
 	  }
   }
