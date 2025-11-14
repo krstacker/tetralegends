@@ -24,7 +24,7 @@ export default function segaRotate(arg) {
   let downShift = SPAWN_OFFSETS[rotationSystem][downShift]
   let yShift = SPAWN_OFFSETS[rotationSystem][pieceShape][1]
   let spawnY = downShift - yShift
-  let pieceY = piece.y + downShift - yShift
+  let pieceY = piece.y + spawnY
   if (pieceShape === "I") {
 	  if (pieceY <= spawnY + 2) {
 		  return
