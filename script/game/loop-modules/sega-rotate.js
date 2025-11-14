@@ -19,7 +19,7 @@ export default function segaRotate(arg) {
 	  return
   }*/
   const piece = arg.piece
-  let rotationSystem = this.parent.rotationSystem
+  let rotationSystem = piece.parent.rotationSystem
   let pieceShape = piece.shape
   let downShift = SPAWN_OFFSETS[rotationSystem][downShift]
   let yShift = SPAWN_OFFSETS[rotationSystem][pieceShape][1]
