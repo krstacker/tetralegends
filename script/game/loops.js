@@ -8285,12 +8285,6 @@ export const loops = {
       game.lineGoal = null
       //game.colors = PIECE_COLORS.sega;
 	  segaSkin = "sega"
-	  if (game.settings.rotationSystem === "heboris") {
-		  segaSkin = "srsx"
-	  }
-	  if (settings.settings.soundbank === "heboris") {
-		  segaSkin = "srsx"
-	  }
 	  if (game.settings.rotationSystem === "handheld") {
 		  game.colors = PIECE_COLORS.standard
 		  segaSkin = "handheld"
@@ -8427,12 +8421,6 @@ export const loops = {
       game.lineGoal = null
       //game.colors = PIECE_COLORS.sega;
 	  segaSkin = "sega"
-	  if (game.settings.rotationSystem === "heboris") {
-		  segaSkin = "srsx"
-	  }
-	  if (settings.settings.soundbank === "heboris") {
-		  segaSkin = "srsx"
-	  }
 	  if (game.settings.rotationSystem === "handheld") {
 		  game.colors = PIECE_COLORS.standard
 		  segaSkin = "handheld"
