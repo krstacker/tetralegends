@@ -1009,7 +1009,6 @@ export default class Stack extends GameModule {
       }
     }
     // Flash
-	ctx = this.parent.piece.ctx
     if (this.flashTime < this.flashLimit) {
       for (let i = 0; i < this.flashX.length; i++) {
         ctx.globalCompositeOperation = "overlay"
@@ -1076,7 +1075,6 @@ export default class Stack extends GameModule {
         }
       }
     }
-	ctx = this.ctx
     // Line clear animation
 	let clearDirtyCells = true
     if (this.toCollapse.length > 0 
