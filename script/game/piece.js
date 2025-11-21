@@ -123,6 +123,22 @@ export default class Piece extends GameModule {
         sound.playBgm(this.parent.settings.music[0], this.parent.type)
       }
     }
+	if (game.rotationSystem === "arsae") {
+		if (game.bufferAre > -1 && game.areBuffered === false && input.getGameDown("specialKey") === false) {
+			game.piece.areLimit = game.bufferAre
+			game.areBuffered = true
+		}
+	}
+	if (game.rotationSystem === "drs") {
+		if (game.bufferAre > -1 && game.areBuffered === false) {
+			game.areBuffered = true
+			game.piece.areLimit = game.bufferAre
+		}
+		if (game.bufferAreLine > -1 && game.areLineBuffered === false) {
+			game.areLineBuffered = true
+			game.piece.areLineLimit = game.bufferAreLine
+		}
+	}
     this.parent.onPieceSpawn(this.parent)
     this.parent.updateMusic()
     this.parent.updateStats()

@@ -2801,6 +2801,9 @@ export const loops = {
       const areTable = [
 		[100, 24],
       ]
+	  const areLineModifierTable = [
+        [100, -4],
+      ]
       const areLineTable = [
 		[100, 30],
       ]
@@ -2875,6 +2878,14 @@ export const loops = {
         const entry = pair[1]
         if (game.stat.level < level) {
 		  game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areLineModifierTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimitLineModifier = framesToMs(entry)
           break
         }
       }
@@ -3014,6 +3025,9 @@ export const loops = {
       const areTable = [
 		[100, 24],
       ]
+	  const areLineModifierTable = [
+        [100, -4],
+      ]
       const areLineTable = [
 		[100, 30],
       ]
@@ -3088,6 +3102,14 @@ export const loops = {
         const entry = pair[1]
         if (game.stat.level < level) {
           game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areLineModifierTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimitLineModifier = framesToMs(entry)
           break
         }
       }

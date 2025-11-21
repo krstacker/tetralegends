@@ -1134,11 +1134,6 @@ export default class Game {
 					game.areBuffered = false
 					game.piece.areLimit = 0
 					game.piece.areLimitLineModifier = game.piece.areLineLimit
-				} else {
-					if (game.bufferAre > -1 && game.areBuffered === false) {
-						game.piece.areLimit = game.bufferAre
-						game.areBuffered = true
-					}
 				}
 			}
 			if (game.rotationSystem === "drs") {
@@ -1150,20 +1145,11 @@ export default class Game {
 				input.getGameDown("rotate180") ||
 				input.getGameDown("hold")
 				) {
+					game.areBuffered = false
+					game.areLineBuffered = false
 					game.piece.areLimit = 0
 					game.piece.areLineLimit = 0
 					settings.settings.stillShowFullActionTextDespiteZeroLineClearAre = true
-					game.areBuffered = false
-					game.areLineBuffered = false
-				} else {
-					if (game.bufferAre > -1 && game.areBuffered === false) {
-						game.areBuffered = true
-						game.piece.areLimit = game.bufferAre
-					}
-					if (game.bufferAreLine > -1 && game.areLineBuffered === false) {
-						game.areLineBuffered = true
-						game.piece.areLineLimit = game.bufferAreLine
-					}
 				}
 			}
 			if (game.rotationSystem === "ds") {
