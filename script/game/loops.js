@@ -8294,21 +8294,28 @@ export const loops = {
       game.lineGoal = null
       //game.colors = PIECE_COLORS.sega;
 	  segaSkin = "sega"
+	  game.stack.flashLineClear = false
 	  if (game.settings.rotationSystem === "handheld") {
 		  game.colors = PIECE_COLORS.standard
 		  segaSkin = "handheld"
+		  game.stack.flashLineClear = true
+		  game.stack.flashClearRate = 200
 	  }
 	  if (game.settings.rotationSystem === "deluxe") {
 		  game.colors = PIECE_COLORS.standard
 		  segaSkin = "deluxe"
+		  game.stack.flashLineClear = true
+		  game.stack.flashClearRate = 200
 	  }
 	  if (game.settings.rotationSystem === "retro") {
 		  game.colors = PIECE_COLORS.retro
 		  segaSkin = "retro"
+		  game.stack.flashLineClear = false
 	  }
 	  if (game.settings.rotationSystem === "original") {
 		  game.colors = PIECE_COLORS.original
 		  segaSkin = "bone"
+		  game.stack.flashLineClear = false
 	  }
 	  game.makeSprite(
 		[
