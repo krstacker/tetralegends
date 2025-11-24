@@ -5651,12 +5651,6 @@ export const loops = {
 		case "ggg":
           bpm = 154
           break
-		case "kalinka":
-          bpm = 105
-          break
-		case "ar":
-          bpm = 100
-          break
       }
       /* game.isRaceMode = true; */
       game.beatTime = bpmToMs(bpm)

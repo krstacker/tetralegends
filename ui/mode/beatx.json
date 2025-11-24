@@ -42,12 +42,6 @@
           "description": "Manuel<br>154 BPM",
           "fixedText": true,
           "value": "ggg"
-        },
-		{
-          "label": "ACE Kalinka",
-          "description": "Arika<br>105 BPM",
-          "fixedText": true,
-          "value": "kalinka"
         }
       ],
       "setting": "song",
