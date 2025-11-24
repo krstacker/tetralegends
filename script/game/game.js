@@ -1140,9 +1140,6 @@ export default class Game {
 					if (game.piece.areLimit > 0) {
 						game.cachedAre = game.piece.areLimit
 					}
-					if (game.piece.areLineLimit > 0) {
-						game.cachedAreLine = game.piece.areLineLimit
-					}
 				}
 			}
 			if (game.rotationSystem === "drs" && game.type !== "sega" && game.type !== "sega2") {
