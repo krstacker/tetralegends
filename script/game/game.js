@@ -112,6 +112,7 @@ export default class Game {
 	this.nonSingleClears = 0
 	this.cachedAre = 0
 	this.cachedAreLine = 0
+	this.cachedAreLineModifier = 0
 	this.useFullAreLine = true
     loadGameType(gametype)
       .then((gameData) => {
@@ -1163,6 +1164,9 @@ export default class Game {
 					}
 					if (game.piece.areLineLimit > 0) {
 						game.cachedAreLine = game.piece.areLineLimit
+					}
+					if (game.piece.areLineLimitModifier > 0) {
+						game.cachedAreLineModifier = game.piece.areLimitLineModifier
 					}
 				}
 			}

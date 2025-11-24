@@ -136,6 +136,9 @@ export default class Piece extends GameModule {
 		if (game.cachedAreLine > 0) {
 			game.piece.areLineLimit = game.cachedAreLine
 		}
+		if (game.cachedAreLineModifier > 0) {
+			game.piece.areLimitLineModifier = game.cachedAreLineModifier
+		}
 	}
     this.parent.updateMusic()
     this.parent.updateStats()
