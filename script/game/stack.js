@@ -76,7 +76,7 @@ export default class Stack extends GameModule {
     for (let x = 0; x < this.grid.length; x++) {
       for (let y = 0; y < this.grid[x].length; y++) {
         if (this.grid[x][y] != null) {
-			if (this.lastPlacedBlocks[x][y] === null) {
+			if (this.arrayContains(this.lastPlacedBlocks, [x, y]) !== true) {
 				this.grid[x][y] = "frozen"
 			}
 		}
@@ -99,7 +99,7 @@ export default class Stack extends GameModule {
     for (let x = 0; x < this.grid.length; x++) {
       for (let y = 0; y < this.grid[x].length; y++) {
         if (this.grid[x][y] != null) {
-			if (this.lastPlacedBlocks[x][y] === null) {
+			if (this.arrayContains(this.lastPlacedBlocks, [x, y]) !== true) {
 				this.grid[x][y] = "hidden"
 			}
 		}
@@ -245,7 +245,8 @@ export default class Stack extends GameModule {
 				this.grid[xLocation][yLocation] = color
 			}
           }
-		  this.lastPlacedBlocks[xLocation][yLocation] = this.grid[xLocation][yLocation]
+		  this.lastPlacedBlocks.push([xLocation, yLocation])
+		  //this.lastPlacedBlocks[xLocation][yLocation] = this.grid[xLocation][yLocation]
           this.dirtyCells.push([xLocation, yLocation])
           this.flashX.unshift(xLocation)
           this.flashY.unshift(yLocation)
@@ -779,7 +780,7 @@ export default class Stack extends GameModule {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
           if (this.noFrozenMinos() === true) {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-			this.lastPlacedBlocks[x][shiftY] = this.lastPlacedBlocks[x][shiftY - 1]
+			this.resetLastPlacedBlocks()
 			if (
 				this.grid[x][shiftY] != null &&
 				this.grid[x][shiftY - 1] != null
@@ -789,7 +790,7 @@ export default class Stack extends GameModule {
 			this.dirtyCells.push([x, shiftY + 1])
 		  } else if (y === bottomLine && this.lineClear >= 4) {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-			this.lastPlacedBlocks[x][shiftY] = this.lastPlacedBlocks[x][shiftY - 1]
+			this.resetLastPlacedBlocks()
 			if (
 				this.grid[x][shiftY] != null &&
 				this.grid[x][shiftY - 1] != null
@@ -812,7 +813,7 @@ export default class Stack extends GameModule {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
           this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-		  this.lastPlacedBlocks[x][shiftY] = this.lastPlacedBlocks[x][shiftY - 1]
+		  this.resetLastPlacedBlocks()
           if (
             this.grid[x][shiftY] != null &&
             this.grid[x][shiftY - 1] != null
@@ -869,7 +870,8 @@ export default class Stack extends GameModule {
     this.grid = cells
   }
   resetLastPlacedBlocks() {
-    const cells = new Array(this.width)
+	this.lastPlacedBlocks = []
+    /*const cells = new Array(this.width)
     for (let i = 0; i < this.width; i++) {
       cells[i] = new Array(this.height + this.hiddenHeight)
     }
@@ -880,7 +882,7 @@ export default class Stack extends GameModule {
 			this.lastPlacedBlocks[x][y] = null
 		}
       }
-    }
+    }*/
   }
   endRollStart() {
 	  sound.add("endingstart")
