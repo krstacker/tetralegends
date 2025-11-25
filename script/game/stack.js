@@ -776,17 +776,18 @@ export default class Stack extends GameModule {
 			this.toCollapse.push(bottomLine)
 		}
 	}
-	let lastPlacedBlocks = this.lastPlacedBlocks
-	this.resetLastPlacedBlocks()
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
           if (this.noFrozenMinos() === true) {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			//this.resetLastPlacedBlocks()
-			for (const block of lastPlacedBlocks) {
-				if (block[0] === x && block[1] === shiftY) {
-					this.lastPlacedBlocks.push(x, shiftY - 1)
+			for (let index = 0; x < this.lastPlacedBlocks.length; index++) {
+				if (
+				this.lastPlacedBlocks[index][0] === x &&
+				this.lastPlacedBlocks[index][1] === shiftY
+				) {
+					this.lastPlacedBlocks[index][1] = shiftY - 1
 				}
 			}
 			if (
@@ -799,9 +800,12 @@ export default class Stack extends GameModule {
 		  } else if (y === bottomLine && this.lineClear >= 4) {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			//this.resetLastPlacedBlocks()
-			for (const block of lastPlacedBlocks) {
-				if (block[0] === x && block[1] === shiftY) {
-					this.lastPlacedBlocks.push(x, shiftY - 1)
+			for (let index = 0; x < this.lastPlacedBlocks.length; index++) {
+				if (
+				this.lastPlacedBlocks[index][0] === x &&
+				this.lastPlacedBlocks[index][1] === shiftY
+				) {
+					this.lastPlacedBlocks[index][1] = shiftY - 1
 				}
 			}
 			if (
@@ -827,9 +831,12 @@ export default class Stack extends GameModule {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
           this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 		  //this.resetLastPlacedBlocks()
-		  for (const block of lastPlacedBlocks) {
-				if (block[0] === x && block[1] === shiftY) {
-					this.lastPlacedBlocks.push(x, shiftY - 1)
+		  for (let index = 0; x < this.lastPlacedBlocks.length; index++) {
+				if (
+				this.lastPlacedBlocks[index][0] === x &&
+				this.lastPlacedBlocks[index][1] === shiftY
+				) {
+					this.lastPlacedBlocks[index][1] = shiftY - 1
 				}
 		  }
           if (
