@@ -76,7 +76,7 @@ export default class Stack extends GameModule {
     for (let x = 0; x < this.grid.length; x++) {
       for (let y = 0; y < this.grid[x].length; y++) {
         if (this.grid[x][y] != null) {
-			if (this.arrayContains(this.lastPlacedBlocks, [x, y]) !== true) {
+			if (this.isLastPlacedBlock(x, y) !== true) {
 				this.grid[x][y] = "frozen"
 			}
 		}
@@ -99,7 +99,7 @@ export default class Stack extends GameModule {
     for (let x = 0; x < this.grid.length; x++) {
       for (let y = 0; y < this.grid[x].length; y++) {
         if (this.grid[x][y] != null) {
-			if (this.arrayContains(this.lastPlacedBlocks, [x, y]) !== true) {
+			if (this.isLastPlacedBlock(x, y) !== true) {
 				this.grid[x][y] = "hidden"
 			}
 		}
@@ -868,6 +868,15 @@ export default class Stack extends GameModule {
       cells[i] = new Array(this.height + this.hiddenHeight)
     }
     this.grid = cells
+  }
+  isLastPlacedBlock(x, y) {
+	  let result = false
+	  for (const block of this.lastPlacedBlocks) {
+		  if (if block[0] === x && block[1] === y) {
+			  result = true
+		  }			  
+	  }
+	  return result
   }
   resetLastPlacedBlocks() {
 	this.lastPlacedBlocks = []
