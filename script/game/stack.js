@@ -205,7 +205,9 @@ export default class Stack extends GameModule {
 	} else {
 		$(".stack-canvas").classList.remove("invis")
 	}
-	this.resetLastPlacedBlocks()
+	if (this.wouldCauseLineClear() <= 0) {
+		this.resetLastPlacedBlocks()
+	}
     for (let y = 0; y < shape.length; y++) {
       for (let x = 0; x < shape[y].length; x++) {
         const isFilled = shape[y][x]
