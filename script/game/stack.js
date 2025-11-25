@@ -789,6 +789,7 @@ export default class Stack extends GameModule {
 				this.lastPlacedBlocks[index][1] === shiftY
 				) {
 					this.lastPlacedBlocks[index][1] = shiftY - 1
+					console.log(shiftY)
 					console.log(this.lastPlacedBlocks)
 				}
 			}
@@ -807,6 +808,7 @@ export default class Stack extends GameModule {
 				this.lastPlacedBlocks[index][1] === shiftY
 				) {
 					this.lastPlacedBlocks[index][1] = shiftY - 1
+					console.log(shiftY)
 					console.log(this.lastPlacedBlocks)
 				}
 			}
@@ -838,6 +840,7 @@ export default class Stack extends GameModule {
 				this.lastPlacedBlocks[index][1] === shiftY
 				) {
 					this.lastPlacedBlocks[index][1] = shiftY - 1
+					console.log(shiftY)
 					console.log(this.lastPlacedBlocks)
 				}
 		  }
