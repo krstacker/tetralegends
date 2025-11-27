@@ -6,7 +6,7 @@
   },
   "data": [
     {
-      "string": "Ace",
+      "label": "Ace",
       "fixedText": true,
       "type": "header"
     },

@@ -8422,6 +8422,9 @@ export const loops = {
         rotate180(arg)
         shifting(arg)
       }
+	  if (!arg.piece.inAre) {
+        hold(arg)
+      }
       gravity(arg)
 	  hardDrop(arg)
       tgmSoftDrop(arg)
