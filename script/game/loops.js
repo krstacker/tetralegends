@@ -7771,12 +7771,7 @@ export const loops = {
       game.piece.gravity = framesToMs(SPEED_TABLE[calcLevel])
       const DELAY_TABLE = [500, 475, 450, 375, 350, 325, 300, 275, 250, 225]
       game.piece.lockDelayLimit = DELAY_TABLE[calcLevel]
-      let NEXT_TABLE = []
-	  if (game.type === "frozenx") {
-		  NEXT_TABLE = [6, 6, 6, 6, 5, 4, 3, 2, 1, 1]
-	  } else {
-		  NEXT_TABLE = [6, 5, 4, 3, 2, 1, 1, 1, 1, 1]
-	  }
+      let NEXT_TABLE = [6, 5, 4, 3, 2, 1, 1, 1, 1, 1]
       game.next.nextLimit = NEXT_TABLE[calcLevel]
       if (calcLevel >= 3 && !shown20GMessage && game.type === "prox") {
         $("#message").textContent = "20G"
