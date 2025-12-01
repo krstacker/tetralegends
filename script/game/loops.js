@@ -7771,7 +7771,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       game.stat.level = Math.min(
-        10,
+        15,
         Math.max(
           settings.game.frozenx.startingLevel,
           Math.floor(game.stat.line / 10 + 1)
