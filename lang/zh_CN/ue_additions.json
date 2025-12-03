@@ -81,13 +81,13 @@
     "message": "新手-AE"
   },
   "asukaDescription": {
-    "message": "你面临着无法延长的时限。你能抵达终点吗？"
+    "message": "碎片散落在地面，但你拥有宽容的锁定机制。你能赶在时间限制结束前抵达终点吗？"
   },
   "konohaLabel": {
     "message": "分级-AE"
   },
   "konohaDescription": {
-    "message": "完美通关可延长时限！你能达成多少次完美通关？"
+    "message": "碎片尺寸翻倍！完美清除可延长时限。你能达成多少次完美清除？"
   },
   "roundsLabel": {
     "message": "突然-AE"

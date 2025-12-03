@@ -81,13 +81,13 @@
     "message": "Novice-AE"
   },
   "asukaDescription": {
-    "message": "You have a time limit that cannot be extended. Can you reach the end?"
+    "message": "The pieces spawn on the ground, but you have a forgiving lockdown. Can you reach the end before the time limit ends?"
   },
   "konohaLabel": {
     "message": "Special-AE"
   },
   "konohaDescription": {
-    "message": "Getting a perfect clear extends the time limit! How many perfect clears can you get?"
+    "message": "The pieces are twice the size! Getting a perfect clear extends the time limit. How many perfect clears can you get?"
   },
   "roundsLabel": {
     "message": "Sudden-AE"

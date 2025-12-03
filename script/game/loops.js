@@ -2849,7 +2849,7 @@ export const loops = {
 		sonicDrop(arg)
 		tgmFirmDrop(arg)
 	  }
-      infiniteLockdown(arg)
+      extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -3069,7 +3069,7 @@ export const loops = {
       gravity(arg)
       tgmSoftDrop(arg)
       hardDrop(arg)
-      infiniteLockdown(arg)
+      extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }

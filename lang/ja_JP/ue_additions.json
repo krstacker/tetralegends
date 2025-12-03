@@ -81,13 +81,13 @@
     "message": "KAMUI"
   },
   "asukaDescription": {
-    "message": "延長できない時間制限があります。最後までたどり着けますか？"
+    "message": "ピースは地面に生成されるが、ロックダウンは寛容だ。制限時間内にゴールに到達できるか？"
   },
   "konohaLabel": {
     "message": "KONOHA"
   },
   "konohaDescription": {
-    "message": "完全クリアを達成すると制限時間が延長されます！いったい何回の完全クリアができるかな？"
+    "message": "ピースが2倍の大きさだ！パーフェクトクリアを達成すると制限時間が延長される。君は何回パーフェクトクリアできるかな？"
   },
   "roundsLabel": {
     "message": "ROUNDS"
