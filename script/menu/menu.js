@@ -198,7 +198,7 @@ class Menu {
 				break
 			}
 			case "aceworld": {
-				difficulty = parseInt(settings.game.aceworld.difficulty)
+				difficulty = parseInt(settings.game.ace.difficulty)
 			}
 		}
 		switch (difficulty) {
@@ -711,7 +711,7 @@ class Menu {
 					break
 					}
 					case "aceworld": {
-						difficulty = parseInt(settings.game.aceworld.difficulty)
+						difficulty = parseInt(settings.game.ace.difficulty)
 					}
 				}
 				switch (difficulty) {
