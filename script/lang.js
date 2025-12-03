@@ -24,6 +24,7 @@ class Locale {
     ]*/
 	this.languages = [
       "en_US",
+	  "en_GB",
       "ja_JP",
       "zh_CN",
     ]
