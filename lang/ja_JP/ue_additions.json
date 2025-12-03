@@ -152,6 +152,12 @@
   "segaHardest": {
     "message": "HARDEST"
   },
+  "newCenturyLabel": {
+    "message": "NEW CENTURY"
+  },
+  "newCenturyDescription": {
+    "message": "キャビネット、ただしガイドライン制御付き"
+  },
   "footerLabel": {
     "message": ""
   }

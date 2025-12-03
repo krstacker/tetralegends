@@ -7,7 +7,7 @@
   },
   "data": [
     {
-      "label": "konohaLabel",
+      "string": "konohaLabel",
       "langOverride": "ue_additions",
       "type": "header"
     }

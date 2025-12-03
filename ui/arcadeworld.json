@@ -1,5 +1,6 @@
 {
   "properties": {
+	"langOverride": "ue_additions",
     "parent": "arcade"
   },
   "data": [
@@ -10,25 +11,25 @@
     },
 	{
       "string": "noviceLabel",
-	  "stringDesc": "noviceDescription"
+	  "stringDesc": "noviceDescription",
       "langOverride": "ue_additions",
       "disabled": true
     },
 	{
       "string": "specialLabel",
-	  "stringDesc": "specialDescription"
+	  "stringDesc": "specialDescription",
       "langOverride": "ue_additions",
 	  "disabled": true
     },
     {
       "string": "suddenLabel",
-	  "stringDesc": "suddenDescription"
+	  "stringDesc": "suddenDescription",
       "langOverride": "ue_additions",
 	  "disabled": true
     },
     {
       "string": "noviceTiLabel",
-	  "stringDesc": "noviceTiDescription"
+	  "stringDesc": "noviceTiDescription",
       "langOverride": "ue_additions",
 	  "default": true,
       "action": "submenu",
@@ -36,35 +37,35 @@
     },
 	{
       "string": "specialTiLabel",
-	  "stringDesc": "specialTiDescription"
+	  "stringDesc": "specialTiDescription",
       "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/specialworld"
     },
     {
       "string": "suddenTiLabel",
-	  "stringDesc": "suddenTiDescription"
+	  "stringDesc": "suddenTiDescription",
       "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/suddenworld"
     },
 	{
       "string": "asukaLabel",
-	  "stringDesc": "asukaDescription"
+	  "stringDesc": "asukaDescription",
       "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/asukaworld"
     },
 	{
       "string": "konohaLabel",
-	  "stringDesc": "konohaDescription"
+	  "stringDesc": "konohaDescription",
       "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/konohaworld"
     },
 	{
       "string": "roundsLabel",
-	  "stringDesc": "roundsDescription"
+	  "stringDesc": "roundsDescription",
       "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/roundsworld"
@@ -72,7 +73,7 @@
 	{
 	  "disabled": true,
       "string": "normal21Label",
-	  "stringDesc": "normal21Description"
+	  "stringDesc": "normal21Description",
       "langOverride": "ue_additions",
 	  "secretA": true,
       "action": "submenu",
@@ -80,7 +81,7 @@
     },
 	{
       "string": "normal31Label",
-	  "stringDesc": "normal31Description"
+	  "stringDesc": "normal31Description",
       "langOverride": "ue_additions",
 	  "secretA": true,
       "action": "submenu",

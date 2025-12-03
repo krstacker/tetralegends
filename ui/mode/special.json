@@ -7,7 +7,7 @@
   },
   "data": [
     {
-      "label": "specialLabel",
+      "string": "specialLabel",
       "langOverride": "ue_additions",
       "type": "header"
     }

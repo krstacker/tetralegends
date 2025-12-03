@@ -7,7 +7,7 @@
   },
   "data": [
     {
-      "label": "normal31Label",
+      "string": "normal31Label",
       "langOverride": "ue_additions",
       "type": "header"
     }

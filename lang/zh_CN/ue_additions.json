@@ -152,6 +152,12 @@
   "segaHardest": {
     "message": "最难的"
   },
+  "newCenturyLabel": {
+    "message": "新世纪"
+  },
+  "newCenturyDescription": {
+    "message": "内阁，但带有指导性控制"
+  },
   "footerLabel": {
     "message": ""
   }

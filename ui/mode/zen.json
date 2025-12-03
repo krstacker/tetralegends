@@ -7,7 +7,7 @@
   },
   "data": [
     {
-      "label": "zenLabel",
+      "string": "zenLabel",
       "langOverride": "menu_root",
       "type": "header"
     },
@@ -62,7 +62,6 @@
       "string": "garbageCapLabel",
       "stringDesc": "garbageCapDescription",
 	  "langOverride": "ue_additions",
-      "fixedText": true,
       "type": "slider",
       "action": "slider",
       "max": 40,

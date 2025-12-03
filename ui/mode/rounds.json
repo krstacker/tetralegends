@@ -7,7 +7,7 @@
   },
   "data": [
     {
-      "label": "roundsLabel",
+      "string": "roundsLabel",
       "langOverride": "ue_additions",
       "type": "header"
     }

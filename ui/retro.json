@@ -35,10 +35,10 @@
       "submenu": "mode/sega"
     },
 	{
-      "fixedText": true,
 	  "secretA": true,
-      "label": "New Century",
-      "description": "Secret mode! Cabinet, but with guideline controls.",
+	  "string": "newCenturyLabel",
+      "stringDesc": "newCenturyDescription",
+	  "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/newcentury"
     }

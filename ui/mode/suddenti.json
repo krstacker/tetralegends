@@ -7,7 +7,7 @@
   },
   "data": [
     {
-      "label": "suddenTiLabel",
+      "string": "suddenTiLabel",
       "langOverride": "ue_additions",
       "type": "header"
     }

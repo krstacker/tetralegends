@@ -7,7 +7,7 @@
   },
   "data": [
     {
-      "label": "newCenturyLabel",
+      "string": "newCenturyLabel",
       "langOverride": "ue_additions",
       "type": "header"
     }
