@@ -76,6 +76,9 @@
   "glossyOption": {
     "message": "Glossy"
   },
+  "pyramidalOption": {
+    "message": "Pyramidal"
+  },
   "flatOption": {
     "message": "Flat"
   },

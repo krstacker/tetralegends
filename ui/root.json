@@ -47,18 +47,18 @@
       "submenu": "arcade"
     },
 	{
-      "string": "aceLabel",
-      "stringDesc": "aceDescription",
-      "action": "submenu",
-	  "width": "half",
-      "submenu": "ace"
-    },
-	{
       "string": "beatLabel",
       "stringDesc": "beatDescription",
       "action": "submenu",
 	  "width": "half",
       "submenu": "beat"
+    },
+	{
+      "string": "aceLabel",
+      "stringDesc": "aceDescription",
+      "action": "submenu",
+	  "width": "half",
+      "submenu": "ace"
     },
     {
       "string": "zenLabel",

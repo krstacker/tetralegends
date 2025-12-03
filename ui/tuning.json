@@ -159,7 +159,7 @@
         },
 		{
           "string": "retroLabel",
-		  "langOverride": "menu_retro",
+		  "langOverride": "menu_root",
           "value": "retro"
         },
         {
@@ -228,7 +228,7 @@
           "value": "arsae"
         },
 		{
-          "label": "SRS-AE",
+          "label": "World-AE",
           "fixedText": true,
           "value": "worldae"
         },
@@ -238,8 +238,8 @@
           "value": "sega"
         },
 		{
-          "label": "New Century",
-          "fixedText": true,
+          "string": "newCenturyLabel",
+		  "langOverride": "ue_additions",
           "value": "newcentury"
         },
 		{

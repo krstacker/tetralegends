@@ -76,6 +76,9 @@
   "glossyOption": {
     "message": "光泽"
   },
+  "pyramidalOption": {
+    "message": "金字塔形的"
+  },
   "flatOption": {
     "message": "纯色"
   },

@@ -76,6 +76,9 @@
   "glossyOption": {
     "message": "光沢のある"
   },
+  "pyramidalOption": {
+    "message": "錐体状"
+  },
   "flatOption": {
     "message": "フラット"
   },

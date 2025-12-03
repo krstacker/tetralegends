@@ -89,28 +89,32 @@
           "value": "srsx"
         },
 		{
-          "label": "ARS",
-          "fixedText": true,
-          "value": "tap"
-        },
-        {
-          "label": "ARS-TI",
+          "label": "Arika",
           "fixedText": true,
           "value": "arika"
         },
+        {
+          "label": "Arika-TI",
+          "fixedText": true,
+          "value": "ti"
+        },
 		{
-          "label": "ARS-ACE",
+          "label": "Arika-ACE",
           "fixedText": true,
           "value": "ace"
         },
 		{
-          "label": "ARS-AE",
+          "label": "Arika-AE",
           "fixedText": true,
           "value": "ae"
         },
         {
           "string": "glossyOption",
           "value": "glossy"
+        },
+		{
+          "string": "pyramidalOption",
+          "value": "pyramidal"
         },
         {
           "string": "flatOption",
@@ -128,7 +132,7 @@
         },
         {
           "string": "retroLabel",
-		  "langOverride": "menu_retro",
+		  "langOverride": "menu_root",
           "value": "retro"
         },
         {
@@ -160,11 +164,6 @@
           "label": "PPT",
           "fixedText": true,
           "value": "ppt"
-        },
-		{
-          "label": "Pyramidal",
-          "fixedText": true,
-          "value": "pyramidal"
         },
 		{
           "string": "segaLabel",

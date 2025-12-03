@@ -75,22 +75,22 @@
           "value": "legacy"
         },
 		{
-          "label": "TGM2",
+          "label": "TGM 2",
           "fixedText": true,
           "value": "tgm2"
         },
         {
-          "label": "TGM3",
+          "label": "TGM 3",
           "fixedText": true,
           "value": "tgm3"
         },
         {
-          "label": "TGMA",
+          "label": "TGM ACE",
           "fixedText": true,
           "value": "ace"
         },
 		{
-          "label": "TGM4",
+          "label": "TGM 4",
           "fixedText": true,
           "value": "tgm4"
         },
@@ -126,7 +126,7 @@
         },
         {
           "string": "retroLabel",
-		  "langOverride": "menu_retro",
+		  "langOverride": "menu_root",
           "value": "nes"
         },
 		 {
@@ -160,8 +160,8 @@
           "value": "sega"
         },
 		{
-          "label": "New Century",
-          "fixedText": true,
+          "string": "newCenturyLabel",
+		  "langOverride": "ue_additions",
           "value": "newcentury"
         },
 		{
