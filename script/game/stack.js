@@ -405,6 +405,9 @@ export default class Stack extends GameModule {
 			}
 			*/
             sound.add(`voxb2b_${this.parent.piece.name.toLowerCase()}spin`)
+			if (this.parent.piece.name.toLowerCase() !== "t") {
+				sound.add(`voxb2b_spin`)
+			}
           } else if (isMini) {
             /*
 			if (this.parent.piece.name.toLowerCase() === "t") {
@@ -413,6 +416,9 @@ export default class Stack extends GameModule {
 				sound.add(`voxerase${this.lineClear}`)
 			}*/
 			sound.add(`voxmini${this.parent.piece.name.toLowerCase()}spin`)
+			if (this.parent.piece.name.toLowerCase() !== "t") {
+				sound.add(`voxminispin`)
+			}
           } else {
 			/*
 			if (this.parent.piece.name.toLowerCase() === "t") {
@@ -423,6 +429,9 @@ export default class Stack extends GameModule {
             sound.add(
               `vox${this.parent.piece.name.toLowerCase()}spin${this.lineClear}`
             )
+			if (this.parent.piece.name.toLowerCase() !== "t") {
+				sound.add(`voxspin${this.lineClear}`)
+			}
           }
         } else {
           if (this.parent.b2b > 1 && this.lineClear === 4) {

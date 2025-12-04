@@ -1,7 +1,7 @@
 import menu from "./menu/menu.js"
 import sound from "./sound.js"
 import locale from "./lang.js"
-const SETTINGS_VERSION = 8
+const SETTINGS_VERSION = 9
 class Settings {
   constructor() {
     this.defaultSettings = {
@@ -76,13 +76,13 @@ class Settings {
     }
     switch (this.defaultSettings.language) {
       case "en_US":
-        this.defaultSettings.voicebank = "arachnoen"
+        this.defaultSettings.voicebank = "off"
         break
 	  case "zh_CN":
-        this.defaultSettings.voicebank = "arachnocn"
+        this.defaultSettings.voicebank = "off"
         break
       case "ja_JP":
-        this.defaultSettings.voicebank = "arachnojp"
+        this.defaultSettings.voicebank = "off"
         break
     }
     this.defaultControls = {
