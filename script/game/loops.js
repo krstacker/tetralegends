@@ -8944,13 +8944,13 @@ export const loops = {
 			garbageAttacks = [2, 4, 5]
 			break
 		  case 2:
-			garbageAttacks = [4, 5, 6, 7]
+			garbageAttacks = [4, 4, 5, 4, 5, 6, 7]
 			break
 		  case 3:
-			garbageAttacks = [4, 5, 6, 7]
+			garbageAttacks = [4, 4, 5, 4, 5, 6, 7]
 			break
 		  case 4:
-			garbageAttacks = [4, 5, 6, 7]
+			garbageAttacks = [4, 4, 5, 4, 5, 6, 7]
 			break
 	  }
       if (
@@ -8963,9 +8963,11 @@ export const loops = {
 			  game.openerUsed = true
 			  game.stack.addGarbageToCounter(game.openerGarbage)
 		  } else {
-			  game.stack.addGarbageToCounter(garbageAttacks[
-			  Math.max(0, Math.floor(Math.random() * garbageAttacks.length) - 1) - game.cpuGarbageCounter
-			  ])
+			  let garbageIndex = Math.max(0, Math.floor(Math.random() * garbageAttacks.length) - 1)
+			  if (garbageIndex <= 2) {
+				  game.cpuGarbageCounter -= garbageAttacks[garbageIndex]
+			  }
+			  game.stack.addGarbageToCounter(garbageAttacks[garbageIndex] - game.cpuGarbageCounter)
 		  }
         }
       }
