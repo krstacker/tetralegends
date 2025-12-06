@@ -8947,10 +8947,10 @@ export const loops = {
 			garbageAttacks = [4, 5, 6, 7]
 			break
 		  case 3:
-			garbageAttacks = [4, 5, 6, 7, 10]
+			garbageAttacks = [4, 5, 6, 7]
 			break
 		  case 4:
-			garbageAttacks = [4, 5, 6, 7, 10]
+			garbageAttacks = [4, 5, 6, 7]
 			break
 	  }
       if (
