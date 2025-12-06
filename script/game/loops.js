@@ -8960,19 +8960,6 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
-      game.stat.level = Math.max(
-        settings.game.survival.startingLevel,
-        Math.floor(game.timePassed / 10000 + 1)
-      )
-      const x = game.stat.level
-      const gravityEquation = (0.99 - (x - 1) * 0.007) ** (x - 1)
-      game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
-      game.garbageRate =
-        x ** game.garbageRateExponent * game.garbageRateMultiplier +
-        game.garbageRateAdditive
-      if (levelUpdate(game)) {
-        game.updateStats()
-      }
       if (
         arg.piece.startingAre >= arg.piece.startingAreLimit &&
         game.marginTime < game.marginTimeLimit
@@ -8987,8 +8974,9 @@ export const loops = {
 	  }
     },
     onPieceSpawn: (game) => {
-		game.cpuGarbage = game.cpuGarbageCounter
-		game.cpuGarbageCounter = 0
+	  game.updateStats()
+	  game.cpuGarbage = game.cpuGarbageCounter
+	  game.cpuGarbageCounter = 0
 	},
     onInit: (game) => {
       game.settings.width = 10
@@ -8999,24 +8987,11 @@ export const loops = {
 	  game.cpuTier = settings.game.versus.cpuTier
 	  game.cpuGarbage = 0
 	  game.cpuGarbageCounter = 0
-      game.garbageRateExponent = [1.91, 1.95, 1.97, 2, 2.03, 2.07, 2.1][
-        difficulty
-      ]
-      game.garbageRateMultiplier = [0.005, 0.01, 0.02, 0.03, 0.05, 0.08, 0.1][
-        difficulty
-      ]
-      game.garbageRateAdditive = [1, 1.5, 2, 2.5, 9, 18, 35][difficulty]
-      game.stack.garbageSwitchRate = [1, 1, 8, 4, 2, 1, 1][difficulty]
-      game.stack.antiGarbageBuffer = [-20, -10, -8, -6, -4, -2, 0][difficulty]
-      if (difficulty <= 1) {
-        game.stack.copyBottomForGarbage = true
-      }
+      game.stack.antiGarbageBuffer = 0
       game.garbageRate = 0
       game.marginTime = 0
       game.marginTimeLimit = 5000
       garbageTimer = 0
-      game.stat.level = settings.game.survival.startingLevel
-      lastLevel = parseInt(settings.game.survival.startingLevel)
       game.piece.gravity = 1000
       updateFallSpeed(game)
       game.updateStats()
