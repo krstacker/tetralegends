@@ -4288,9 +4288,9 @@ export const loops = {
     onPieceSpawn: (game) => {
 	  let lastLevel = 15
 	  if (settings.game.ace.lineGoal >= 0) {
-		  lastLevel = 99
-	  } else {
 		  lastLevel = settings.game.ace.lineGoal / 10
+	  } else {
+		  lastLevel = 99
 	  }
       game.stat.level = Math.min(
 		Math.floor(game.stat.line / 10 + 1),
@@ -5027,9 +5027,9 @@ export const loops = {
     onPieceSpawn: (game) => {
 	  let lastLevel = 15
 	  if (settings.game.ace.lineGoal >= 0) {
-		  lastLevel = 99
-	  } else {
 		  lastLevel = settings.game.ace.lineGoal / 10
+	  } else {
+		  lastLevel = 99
 	  }
       game.stat.level = Math.min(
 		Math.floor(game.stat.line / 10 + 1),
