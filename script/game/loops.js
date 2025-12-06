@@ -9007,11 +9007,11 @@ export const loops = {
       game.stack.new()
       game.piece.xSpawnOffset = 0
       game.resize()
-	  game.cpuTier = settings.game.versus.cpuTier
+	  game.cpuTier = parseInt(settings.game.versus.cpuTier)
 	  game.openerUsed = false
 	  game.openerGarbage = 0
 	  game.garbageInterval = 0
-	  switch (parseInt(game.cpuTier)) {
+	  switch (game.cpuTier) {
 		  case 1:
 			game.openerGarbage = 2
 			game.garbageInterval = 8*1000
