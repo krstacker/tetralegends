@@ -45,6 +45,13 @@
       "stringDesc": "comboDescription",
       "action": "submenu",
       "submenu": "mode/combo"
+    },
+	{
+      "string": "masterClassicLabel",
+      "stringDesc": "masterClassicDescription",
+	  "langOverride": "ue_additions",
+      "action": "submenu",
+      "submenu": "mode/masterclassic"
     }
   ]
 }

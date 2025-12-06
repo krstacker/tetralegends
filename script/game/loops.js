@@ -7800,6 +7800,85 @@ export const loops = {
         400, 376, 353, 332, 312, 294, 276, 259, 244, 229, 215, 203, 190, 179,
         168, 158, 149, 140, 131, 123, 116, 109, 103, 96, 91, 85, 80, 75, 71, 65,
       ]
+      /*
+	  game.piece.areLimit = ARE_TABLE[calcLevel]
+	  game.piece.areLineLimit = ARE_TABLE[calcLevel]
+      game.stat.entrydelay = `${ARE_TABLE[calcLevel]}ms`
+	  */
+      levelUpdate(game)
+    },
+    onInit: (game) => {
+      if (settings.game.master.startingLevel < 10) {
+        sound.playMenuSe("hardstart1")
+      } else if (settings.game.master.startingLevel < 20) {
+        sound.playMenuSe("hardstart2")
+      } else if (settings.game.master.startingLevel < 25) {
+        sound.playMenuSe("hardstart3")
+      } else {
+        sound.playMenuSe("hardstart4")
+      }
+      game.lineGoal = 300
+      game.stat.level = settings.game.master.startingLevel
+      lastLevel = parseInt(settings.game.master.startingLevel)
+      game.prefixes.level = "M"
+      /*
+	  game.stat.entrydelay = "400ms"
+	  */
+      game.piece.gravity = framesToMs(1 / 20)
+      updateFallSpeed(game)
+      game.updateStats()
+    },
+  },
+  masterclassic: {
+    update: (arg) => {
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+        rotate(arg)
+        rotate180(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      softDrop(arg)
+      hardDrop(arg)
+      switch (settings.game.master.lockdownMode) {
+        case "infinity":
+          infiniteLockdown(arg)
+          break
+        case "extended":
+          extendedLockdown(arg)
+          break
+        case "classic":
+          classicLockdown(arg)
+          break
+      }
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+    },
+    onPieceSpawn: (game) => {
+      game.stat.level = Math.max(
+        Math.floor(game.stat.line / 10 + 1),
+        settings.game.master.startingLevel
+      )
+      const calcLevel = Math.min(29, game.stat.level - 1)
+      const DELAY_TABLE = [
+        500, 480, 461, 442, 425, 408, 391, 376, 361, 346, 332, 319, 306, 294,
+        282, 271, 260, 250, 240, 230, 221, 212, 204, 196, 188, 180, 173, 166,
+        159, 153,
+      ]
+      game.piece.lockDelayLimit = DELAY_TABLE[calcLevel]
+      const ARE_TABLE = [
+        400, 376, 353, 332, 312, 294, 276, 259, 244, 229, 215, 203, 190, 179,
+        168, 158, 149, 140, 131, 123, 116, 109, 103, 96, 91, 85, 80, 75, 71, 65,
+      ]
       game.piece.areLimit = ARE_TABLE[calcLevel]
 	  game.piece.areLineLimit = ARE_TABLE[calcLevel]
       game.stat.entrydelay = `${ARE_TABLE[calcLevel]}ms`

@@ -140,6 +140,18 @@
   "newCenturyDescription": {
     "message": "内阁，但带有指导性控制"
   },
+  "masterClassicLabel": {
+    "message": "传承大师"
+  },
+  "masterClassicDescription": {
+    "message": "重制前的旧版大师"
+  },
+  "versusLabel": {
+    "message": "シラヌイ"
+  },
+  "versusDescription": {
+    "message": "CPUとの対戦！CPUが上限に達したら、あなたの勝ちです。がんばれ！"
+  },
   "footerLabel": {
     "message": ""
   }

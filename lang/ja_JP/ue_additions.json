@@ -140,6 +140,18 @@
   "newCenturyDescription": {
     "message": "キャビネット、ただしガイドライン制御付き"
   },
+  "masterClassicLabel": {
+    "message": "マスターレガシー"
+  },
+  "masterClassicDescription": {
+    "message": "リワーク前の旧マスター版"
+  },
+  "versusLabel": {
+    "message": "对决"
+  },
+  "versusDescription": {
+    "message": "与CPU对决！若CPU达到上限，你即获胜。祝你好运！"
+  },
   "footerLabel": {
     "message": ""
   }
