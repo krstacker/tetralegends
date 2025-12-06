@@ -13,7 +13,7 @@
       "string": "presetsLabel",
       "stringDesc": "presetDescription",
       "action": "submenu",
-      "submenu": "tuning/daspresets"
+      "submenu": "daspresets"
     },
     {
       "string": "dasLabel",
