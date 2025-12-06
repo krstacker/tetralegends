@@ -20,5 +20,9 @@
     "areLimitLineModifier": 166.666666667,
     "spinDetectionType": "3corner"
   },
+  "stack": {
+    "useGarbageSending": true,
+    "showGarbageSendAnimation": true
+  },
   "stats": ["score", "line", "piece"]
 }

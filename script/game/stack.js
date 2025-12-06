@@ -582,7 +582,12 @@ export default class Stack extends GameModule {
       this.waitingGarbage - garbageToClear
     )
     if (this.waitingGarbage > 0 && !this.lineClear) {
-      const brokenLineLimit = settings.settings.brokenLineLimit
+      let brokenLineLimit = settings.settings.brokenLineLimit
+	  if (this.parent.type === "versus") {
+		  brokenLineLimit = 40
+	  } else {
+		  brokenLineLimit = settings.settings.brokenLineLimit
+	  }
       if (this.waitingGarbage > brokenLineLimit) {
         this.spawnBrokenLine(brokenLineLimit)
         this.waitingGarbage -= brokenLineLimit

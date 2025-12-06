@@ -8954,8 +8954,7 @@ export const loops = {
 			break
 	  }
       if (
-        arg.piece.startingAre >= arg.piece.startingAreLimit &&
-        game.marginTime >= game.marginTimeLimit
+        arg.piece.startingAre >= arg.piece.startingAreLimit
       ) {
         garbageTimer += arg.ms
         if (garbageTimer > game.garbageInterval) {
@@ -9034,8 +9033,6 @@ export const loops = {
       game.stack.antiGarbageBuffer = -20
 	  game.copyBottomForGarbage = false
       game.garbageRate = 0
-      game.marginTime = 0
-      game.marginTimeLimit = 5000
       garbageTimer = 0
       game.piece.gravity = 1000
       updateFallSpeed(game)
