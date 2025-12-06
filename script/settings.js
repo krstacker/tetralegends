@@ -166,6 +166,7 @@ class Settings {
       },
 	  versus: {
         cpuTier: 1,
+		regulationMode: false,
       },
     }
     this.settings = {}

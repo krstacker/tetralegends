@@ -37,6 +37,15 @@
       "setting": "cpuTier",
       "gameName": "versus",
       "settingType": "game"
+    },
+	{
+      "string": "regulationModeLabel",
+      "stringDesc": "regulationModeDescription",
+      "type": "toggle",
+      "action": "toggle",
+      "setting": "regulationMode",
+      "gameName": "versus",
+      "settingType": "game"
     }
   ]
 }

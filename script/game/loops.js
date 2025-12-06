@@ -8996,6 +8996,15 @@ export const loops = {
 	  }
     },
     onPieceSpawn: (game) => {
+	  if (settings.game.versus.regulationMode) {
+		  game.piece.areLimit = 0
+		  game.piece.areLineLimit = 0
+		  game.piece.areLimitLineModifier = 0
+	  } else {
+		  game.piece.areLimit = 100
+		  game.piece.areLineLimit = 166.666666667
+		  game.piece.areLimitLineModifier = 166.666666667
+	  }
 	  game.updateStats()
 	  game.cpuGarbage = game.cpuGarbageCounter
 	  game.cpuGarbageCounter = 0
@@ -9013,19 +9022,35 @@ export const loops = {
 	  switch (game.cpuTier) {
 		  case 1:
 			game.openerGarbage = 2
-			game.garbageInterval = 8*1000
+			if (settings.game.versus.regulationMode) {
+				game.garbageInterval = 10*1000
+			} else {
+				game.garbageInterval = 12*1000
+			}
 			break
 		  case 2:
 			game.openerGarbage = 4
-			game.garbageInterval = 6*1000
+			if (settings.game.versus.regulationMode) {
+				game.garbageInterval = 8*1000
+			} else {
+				game.garbageInterval = 10*1000
+			}
 			break
 		  case 3:
 			game.openerGarbage = 6
-			game.garbageInterval = 4*1000
+			if (settings.game.versus.regulationMode) {
+				game.garbageInterval = 4*1000
+			} else {
+				game.garbageInterval = 6*1000
+			}
 			break
 		  case 4:
 			game.openerGarbage = 10
-			game.garbageInterval = 2*1000
+			if (settings.game.versus.regulationMode) {
+				game.garbageInterval = 2*1000
+			} else {
+				game.garbageInterval = 4*1000
+			}
 			break
 	  }
 	  game.cpuGarbage = 0
