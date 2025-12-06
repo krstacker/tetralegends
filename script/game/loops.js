@@ -8971,8 +8971,8 @@ export const loops = {
 		  }
         }
       }
-	  if (game.stack.waitingGarbage < 0) {
-		  game.cpuGarbageCounter -= game.stack.waitingGarbage
+	  if (game.stack.waitingGarbage <= 0) {
+		  game.cpuGarbageCounter += Math.abs(game.stack.waitingGarbage)
 		  game.stack.waitingGarbage = 0
 	  }
       gravity(arg)
