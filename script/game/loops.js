@@ -8976,7 +8976,11 @@ export const loops = {
 		  game.stack.waitingGarbage = 0
 	  }
       gravity(arg)
-      softDrop(arg, 70)
+      if (settings.game.versus.regulationMode) {
+		  hyperSoftDrop(arg)
+	  } else {
+		  tgmSoftDrop(arg)
+	  }
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
