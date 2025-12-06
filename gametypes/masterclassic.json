@@ -15,9 +15,6 @@
     "isHardMode": true
   },
   "piece": {
-    "areLimit": 100,
-    "areLineLimit": 0,
-    "areLimitLineModifier": 166.666666667,
     "spinDetectionType": "3corner"
   },
   "stats": ["score", "level", "entrydelay", "line", "piece"]
