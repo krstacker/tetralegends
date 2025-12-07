@@ -8974,7 +8974,7 @@ export const loops = {
 		  }
         }
       }
-	  if (game.stack.waitingGarbage <= 0) {
+	  if (game.stack.waitingGarbage <= 0 && arg.piece.startingAre >= arg.piece.startingAreLimit) {
 		  game.cpuGarbageCounter += Math.abs(game.stack.waitingGarbage)
 		  game.stack.waitingGarbage = 0
 	  }
