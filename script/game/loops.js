@@ -8967,7 +8967,7 @@ export const loops = {
 			  if (garbageIndex <= 2) {
 				  game.cpuGarbageCounter -= garbageAttacks[garbageIndex]
 			  }
-			  game.stack.addGarbageToCounter(garbageAttacks[garbageIndex] - game.cpuGarbageCounter)
+			  game.stack.addGarbageToCounter(garbageAttacks[garbageIndex] - Math.max(0, game.cpuGarbageCounter))
 		  }
         }
       }
