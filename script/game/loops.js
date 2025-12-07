@@ -8974,10 +8974,6 @@ export const loops = {
 		  }
         }
       }
-	  if (game.stack.waitingGarbage <= 0 && arg.piece.startingAre >= arg.piece.startingAreLimit) {
-		  game.cpuGarbageCounter += Math.abs(game.stack.waitingGarbage)
-		  game.stack.waitingGarbage = 0
-	  }
       gravity(arg)
       if (settings.game.versus.regulationMode) {
 		  hyperSoftDrop(arg)
@@ -9005,6 +9001,7 @@ export const loops = {
 	  }
     },
     onPieceSpawn: (game) => {
+	  game.updateStats()
 	  if (settings.game.versus.regulationMode) {
 		  game.piece.areLimit = 0
 		  game.piece.areLineLimit = 0
@@ -9014,7 +9011,10 @@ export const loops = {
 		  game.piece.areLineLimit = 166.666666667
 		  game.piece.areLimitLineModifier = 166.666666667
 	  }
-	  game.updateStats()
+	  if (game.stack.waitingGarbage <= 0) {
+		  game.cpuGarbageCounter += Math.abs(game.stack.waitingGarbage)
+		  game.stack.waitingGarbage = 0
+	  }
 	  game.cpuGarbage += game.cpuGarbageCounter
 	  game.cpuGarbageCounter = 0
 	},
