@@ -209,6 +209,9 @@ export default class Game {
 				gametype === "deluxe") {
 				sound.load("hebooldstyle")
 				this.loadedSounbank = "hebooldstyle"
+				} else if (gametype === "terminal")
+				sound.load("e60")
+				this.loadedSounbank = "e60"
 				} else {
 				sound.load("heboris")
 				this.loadedSounbank = "heboris"
