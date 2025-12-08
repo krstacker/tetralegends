@@ -1086,7 +1086,7 @@ export default class Stack extends GameModule {
         if (
           settings.settings.lockFlash !== "off" &&
           settings.settings.lockFlash !== "flash" &&
-		  this.parent.useBoneBlocks !== true
+		  this.parent.piece.useBoneBlocks !== true
         ) {
           flashCtx.fillRect(x, Math.floor(y), cellSize, cellSize)
         }
@@ -1133,7 +1133,7 @@ export default class Stack extends GameModule {
         }
         // Solid white 2f
         if (this.flashTime < 50 && settings.settings.lockFlash !== "off"
-		&& this.parent.useBoneBlocks !== true) {
+		&& this.parent.piece.useBoneBlocks !== true) {
           flashCtx.globalCompositeOperation = "source-over"
           flashCtx.fillStyle = `#fff`
           flashCtx.fillRect(x, Math.floor(y), cellSize, cellSize)

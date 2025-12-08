@@ -9367,7 +9367,10 @@ export const loops = {
       }
       gravity(arg)
       hardDrop(arg)
-      retroLockdown(arg)
+      //retroLockdown(arg)
+	  if (gameHandler.game.piece.isLanded) {
+		  gameHandler.game.piece.mustLock = true
+	  }
       lockFlash(arg)
       updateLasts(arg)
       /* Might use this code later
