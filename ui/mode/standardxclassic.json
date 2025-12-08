@@ -2,7 +2,7 @@
   "properties": {
     "parent": "tetrax",
     "langOverride": "mode-options",
-    "game": "standardx",
+    "game": "standardxclassic",
     "pgmusic": "pg-marathon"
   },
   "data": [
