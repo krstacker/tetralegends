@@ -34,6 +34,14 @@
 	  "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/frozenx"
+    },
+	{
+	  "secretA": true,
+      "string": "standardXClassicLabel",
+      "stringDesc": "standardXClassicDescription",
+	  "langOverride": "ue_additions",
+      "action": "submenu",
+      "submenu": "mode/standardxclassic"
     }
   ]
 }
