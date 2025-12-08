@@ -9416,7 +9416,7 @@ export const loops = {
       game.piece.gravity = framesToMs(60)
       updateFallSpeed(game)
 	  game.makeSprite(
-		colors = [
+		[
 			"red",
 			"orange",
 			"yellow",
@@ -9439,6 +9439,7 @@ export const loops = {
 		["mino", "stack"],
 		"bone"
 	  )
+	  game.colors = PIECE_COLORS.original
       game.updateStats()
     },
   },
