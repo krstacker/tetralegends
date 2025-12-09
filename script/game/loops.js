@@ -2810,6 +2810,13 @@ export const loops = {
       } else {
         game.piece.lockDelayLimit = 500
       }
+	  if (game.stat.level >= 10 && game.musicProgression < 2) {
+		if (game.stat.piece > 0 || game.timePassed > 0) {
+          sound.killBgm()
+          sound.playBgm(game.settings.music[2], game.type)
+		  game.musicProgression = 2
+        }
+      }
       updateFallSpeed(game)
       levelUpdate(game)
     },
@@ -2820,6 +2827,7 @@ export const loops = {
       game.stat.level = settings.game.marathon.startingLevel
       lastLevel = parseInt(settings.game.marathon.startingLevel)
       game.piece.gravity = 1000
+	  game.musicProgression = 1
       updateFallSpeed(game)
       game.updateStats()
     },

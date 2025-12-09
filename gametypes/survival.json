@@ -10,7 +10,6 @@
     "skin": "standard",
     "soundbank": "standard",
     "music": "survival",
-    "hasDangerBgm": true,
     "scoreTable": "guideline",
     "background": "marathon.jpg"
   },
