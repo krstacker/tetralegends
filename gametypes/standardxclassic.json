@@ -9,7 +9,8 @@
     "rotationSystem": "tetrax",
     "skin": "tetrax",
     "soundbank": "tetrax",
-    "music": ["../marathon/marathon", "../marathon/marathon-last"],
+    "music": ["../marathon/marathon", "../marathon/marathon-2"],
+	"hasDangerBgm": true,
     "scoreTable": "tetrax",
     "background": "marathon.jpg"
   },

@@ -7911,15 +7911,7 @@ export const loops = {
         game.marginTime += arg.ms
       }
     },
-    onPieceSpawn: (game) => {
-	  if (game.stat.level >= 10 && game.musicProgression < 1) {
-		if (game.stat.piece > 0 || game.timePassed > 0) {
-          sound.killBgm()
-          sound.playBgm(game.settings.music[1], game.type)
-		  game.musicProgression = 1
-        }
-      }
-	},
+    onPieceSpawn: (game) => {},
     onInit: (game) => {
       // if (settings.game.survival.matrixWidth === "standard") {
       //   game.settings.width = 10
@@ -7994,7 +7986,6 @@ export const loops = {
       }
       game.garbageRate = 0
       game.marginTime = 0
-	  game.musicProgression = 0
       game.marginTimeLimit = 5000
       garbageTimer = 0
       game.stat.level = settings.game.survival.startingLevel
