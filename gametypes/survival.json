@@ -9,7 +9,7 @@
     "rotationSystem": "srs",
     "skin": "standard",
     "soundbank": "standard",
-    "music": "survival",
+    "music": ["survival", "survival-last"],
     "scoreTable": "guideline",
     "background": "marathon.jpg"
   },
