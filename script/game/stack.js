@@ -1318,9 +1318,12 @@ export default class Stack extends GameModule {
       Math.floor(newLevel / levelsPerSection)
     ) {
       if (newLevel !== levelLimit) {
-		  if (this.parent.trackAESections) {
+		  if (this.parent.trackAESections && newLevel >= 200) {
 			  if (this.parent.tetraAESections >= 6) {
 				  this.parent.goodAESections += 1
+			  }
+			  if (this.parent.goodAESections >= 9) {
+				  this.parent.goodAESections = 9
 			  }
 			  this.parent.tetraAESections = 0
 		  }

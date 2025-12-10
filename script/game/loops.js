@@ -617,6 +617,8 @@ const updateAEGrade = (game) => {
 	  }
 	  if (endRollPassed && game.goodAESections >= 9) {
 		  A = 10
+	  } else if (game.goodAESections >= 9) {
+		  A = 9
 	  } else {
 		  A = game.goodAESections
 	  }
