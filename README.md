@@ -12,6 +12,6 @@
 - New secret modes [Can you find them?]
 
 # Notes
-- (Pressure) Backpedalling was impossible to replicate on Tetra Legends.
-- (Sudden-AE) Cyclone was impossible to replicate on Tetra Legends. To compensate, Master Pikii II (frozen minos from level 1300+) has been made harsher than the original.
+- (Advance-AE) Backpedalling was impossible to replicate on Tetra Legends.
+- (Sudden-AE) Cyclone is a work in progress. Expect issues.
 - If link says 404 site not found, the site is not down, just updating.
