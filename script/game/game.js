@@ -448,6 +448,7 @@ export default class Game {
     $("#game-container").style.transitionDuration = ""
     $("#game-container").style.transform = ""
     $("#game-container").classList.remove("sil")
+	document.getElementById("animate").classList.remove("sil")
     $("#stack").classList.remove("sil")
     $("#piece").classList.remove("sil")
   }

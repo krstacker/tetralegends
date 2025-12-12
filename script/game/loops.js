@@ -2971,7 +2971,7 @@ export const loops = {
       } else {
         game.piece.lockDelayLimit = 500
       }
-	  if (game.stat.level >= 15 && game.musicProgression < 1 && 
+	  if (game.stat.level >= 10 && game.musicProgression < 1 && 
 	  game.settings.rotationSystem !== "heboris"
 	  ) {
 		if (game.stat.piece > 0 || game.timePassed > 0) {

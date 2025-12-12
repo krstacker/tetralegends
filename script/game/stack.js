@@ -319,6 +319,10 @@ export default class Stack extends GameModule {
       sound.add("tspinbonus")
     }
     const version = isMini ? "mini" : ""
+	$("#combo-counter-container").classList.remove("tetris-flash-invis")
+	$("#combo-counter-container").classList.remove("tetris-flash-outlineoff")
+	$("#combo-counter-container").classList.remove("tetris-flash-outlineon-danger")
+	$("#combo-counter-container").classList.remove("tetris-flash")
     if (this.lineClear >= 4 && this.flashOnTetris) {
 	  if (this.isFading || this.isHidden) {
 		resetAnimation("#stack", "tetris-flash-invis")
