@@ -2959,10 +2959,10 @@ export const loops = {
     onPieceSpawn: (game) => {
       game.stat.level = Math.max(
 		settings.game.mono.startingLevel,
-		Math.floor(game.stat.line / 10 + 1)
+		Math.floor(game.stat.line / 10)
 	  )
       const x = game.stat.level
-      const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
+      const gravityEquation = (0.8 - x * 0.007) ** (x - 1)
       game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
       if (game.stat.level >= 20) {
         game.piece.lockDelayLimit = ~~framesToMs(
