@@ -37,6 +37,7 @@ import sonicDrop from "./loop-modules/sonic-drop.js"
 import softDrop from "./loop-modules/soft-drop.js"
 import softDropRetro from "./loop-modules/soft-drop-retro.js"
 import softDropNes from "./loop-modules/soft-drop-nes.js"
+import softDropWithGravityOverride from "./loop-modules/soft-drop-with-gravity-override.js"
 import sound from "../sound.js"
 import updateLasts from "./loop-modules/update-lasts.js"
 import {
@@ -2942,7 +2943,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg)
+      softDropWithGravityOverride(arg, 50)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
