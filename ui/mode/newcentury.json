@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "retro",
+    "parent": "guideline",
     "langOverride": "mode-options",
     "game": "newcentury",
     "pgmusic": "pg-newcentury"

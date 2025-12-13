@@ -40,20 +40,6 @@
       "stringDesc": "segaDescription",
       "action": "submenu",
       "submenu": "mode/sega"
-    },
-	{
-      "string": "monoLabel",
-      "stringDesc": "monoDescription",
-	  "langOverride": "ue_additions",
-      "action": "submenu",
-      "submenu": "mode/mono"
-    },
-	{
-	  "string": "newCenturyLabel",
-      "stringDesc": "newCenturyDescription",
-	  "langOverride": "ue_additions",
-      "action": "submenu",
-      "submenu": "mode/newcentury"
     }
   ]
 }

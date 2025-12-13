@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "retro",
+    "parent": "guideline",
     "langOverride": "mode-options",
     "game": "mono",
     "pgmusic": "pg-mono"
