@@ -2999,11 +2999,11 @@ export const loops = {
       levelUpdate(game)
     },
     onInit: (game) => {
-      if (settings.game.marathon.lineGoal >= 0) {
-        game.lineGoal = settings.game.marathon.lineGoal
-      }
-	  if (game.settings.rotationSystem === "heboris") {
-		  game.settings.music = ["../heboris/hebo", "../heboris/hebo"]
+      if (game.settings.rotationSystem === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
+	  }
+	  if (settings.settings.soundbank === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
 	  }
 	  game.makeSprite(
 		[
@@ -3101,11 +3101,11 @@ export const loops = {
       levelUpdate(game)
     },
     onInit: (game) => {
-      if (settings.game.marathon.lineGoal >= 0) {
-        game.lineGoal = settings.game.marathon.lineGoal
-      }
 	  if (game.settings.rotationSystem === "heboris") {
-		  game.settings.music = ["../heboris/hebo", "../heboris/hebo"]
+		  game.settings.music = ["../heboris/hebo"]
+	  }
+	  if (settings.settings.soundbank === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
 	  }
 	  game.makeSprite(
 		[
@@ -3209,11 +3209,11 @@ export const loops = {
       levelUpdate(game)
     },
     onInit: (game) => {
-      if (settings.game.marathon.lineGoal >= 0) {
-        game.lineGoal = settings.game.marathon.lineGoal
-      }
 	  if (game.settings.rotationSystem === "heboris") {
-		  game.settings.music = ["../heboris/hebo", "../heboris/hebo"]
+		  game.settings.music = ["../heboris/hebo"]
+	  }
+	  if (settings.settings.soundbank === "heboris") {
+		  game.settings.music = ["../heboris/hebo"]
 	  }
 	  game.redrawOnLevelUp = true
 	  if (settings.settings.skin !== "auto") {
