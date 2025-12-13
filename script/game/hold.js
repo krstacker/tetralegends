@@ -155,6 +155,9 @@ export default class Hold extends GameModule {
 		  color = this.parent.piece.boneColor
 		  suffix = "bone"
 		}
+		if (this.parent.piece.useRetroColors) {
+		  suffix = `-${this.parent.stat.level % 10}`
+		}
         const img = document.getElementById(`mino-${color}${suffix}`)
         const isFilled = shape[y][x]
         if (isFilled) {
