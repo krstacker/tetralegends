@@ -119,6 +119,12 @@
   "versusDescription": {
     "message": "Duel against a CPU! If the CPU tops out, you win. Good luck!"
   },
+  "extraLabel": {
+    "message": "Extra"
+  },
+  "extraDescription": {
+    "message": "Extra modes that you can try"
+  },
   "footerLabel": {
     "message": ""
   }

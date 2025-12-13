@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "guideline",
+    "parent": "extra",
     "langOverride": "mode-options",
     "game": "mono",
     "pgmusic": "pg-mono"

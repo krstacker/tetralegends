@@ -11,6 +11,7 @@
     "soundbank": "newcentury",
     "music": "../newcentury/newcentury1",
     "scoreTable": "guideline",
+	"disableDefaultSkinLoad": true,
     "background": "marathon.jpg"
   },
   "piece": {

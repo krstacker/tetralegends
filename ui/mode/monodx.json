@@ -1,0 +1,27 @@
+{
+  "properties": {
+    "parent": "extra",
+    "langOverride": "mode-options",
+    "game": "monodx",
+    "pgmusic": "pg-monodx"
+  },
+  "data": [
+    {
+      "string": "monoDeluxeLabel",
+      "langOverride": "ue_additions",
+      "type": "header"
+    },
+	{
+      "string": "startingLevelLabel",
+      "stringDesc": "startingLevelDescription",
+      "type": "slider",
+      "action": "slider",
+      "max": 19,
+      "min": 0,
+      "discrete": 1,
+      "setting": "startingLevel",
+      "gameName": "monodx",
+      "settingType": "game"
+    }
+  ]
+}

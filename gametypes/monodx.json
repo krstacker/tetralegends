@@ -9,7 +9,7 @@
     "rotationSystem": "srs",
     "skin": "handheld",
     "soundbank": "mono",
-    "music": "monodx",
+    "music": ["monodx", "monodx-last"],
     "scoreTable": "guideline",
 	"disableDefaultSkinLoad": true,
     "background": "marathon.jpg"

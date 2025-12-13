@@ -119,6 +119,12 @@
   "versusDescription": {
     "message": "CPUとの対戦！CPUが上限に達したら、あなたの勝ちです。がんばれ！"
   },
+  "extraLabel": {
+    "message": "追加"
+  },
+  "extraDescription": {
+    "message": "試せる追加モード"
+  },
   "footerLabel": {
     "message": ""
   }

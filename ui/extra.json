@@ -1,0 +1,41 @@
+{
+  "properties": {
+    "parent": "root",
+    "vox": "ue_additions"
+  },
+  "data": [
+    {
+      "string": "extraLabel",
+      "langOverride": "menu_root",
+      "type": "header"
+    },
+	{
+      "string": "modernNesLabel",
+      "stringDesc": "modernNesDescription",
+	  "langOverride": "ue_additions",
+      "action": "submenu",
+      "submenu": "mode/modernnes"
+    },
+    {
+      "string": "monoLabel",
+      "stringDesc": "monoDescription",
+	  "langOverride": "ue_additions",
+      "action": "submenu",
+      "submenu": "mode/mono"
+    },
+	{
+      "string": "monoDeluxeLabel",
+      "stringDesc": "monoDeluxeDescription",
+	  "langOverride": "ue_additions",
+      "action": "submenu",
+      "submenu": "mode/monodx"
+    },
+	{
+	  "string": "newCenturyLabel",
+      "stringDesc": "newCenturyDescription",
+	  "langOverride": "ue_additions",
+      "action": "submenu",
+      "submenu": "mode/newcentury"
+    }
+  ]
+}

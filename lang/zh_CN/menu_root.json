@@ -119,6 +119,12 @@
   "versusDescription": {
     "message": "与CPU对决！若CPU达到上限，你即获胜。祝你好运！"
   },
+  "extraLabel": {
+    "message": "额外"
+  },
+  "extraDescription": {
+    "message": "可供尝试的额外模式"
+  },
   "footerLabel": {
     "message": ""
   }

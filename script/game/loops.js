@@ -3031,6 +3031,283 @@ export const loops = {
       game.updateStats()
     },
   },
+  monodx: {
+    update: (arg) => {
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+        rotate(arg)
+        rotate180(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      softDropWithGravityOverride(arg, framesToMs(2))
+      hardDrop(arg)
+      extendedLockdown(arg)
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+      /* Might use this code later
+      $('#das').max = arg.piece.dasLimit;
+      $('#das').value = arg.piece.das;
+      $('#das').style.setProperty('--opacity', ((arg.piece.arr >= arg.piece.arrLimit) || arg.piece.inAre) ? 1 : 0);
+      */
+    },
+    onPieceSpawn: (game) => {
+      game.stat.level = Math.max(
+		settings.game.mono.startingLevel,
+		Math.floor(game.stat.line / 10)
+	  )
+	  /*
+      const x = game.stat.level
+      const gravityEquation = (0.8 - x * 0.007) ** (x - 1)
+      game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+	  if (game.stat.level >= 20) {
+        game.piece.lockDelayLimit = ~~framesToMs(
+          30 * Math.pow(0.93, Math.pow(game.stat.level - 20, 0.8))
+        )
+      } else {
+        game.piece.lockDelayLimit = 500
+      }
+	  */
+	  const gravityTable = [
+        53, 49, 45, 41, 37, 33, 28, 22, 17, 11, 9, 8, 7, 6, 5, 4, 3, 1/3, 1/9, 1/20,
+      ]
+	  game.piece.gravity = framesToMs(gravityTable[Math.min(game.stat.level, 19)])
+	  if (game.stat.level >= 19) {
+        game.piece.lockDelayLimit = ~~framesToMs(
+          30 * Math.pow(0.93, Math.pow(game.stat.level - 19, 0.8))
+        )
+      } else {
+        game.piece.lockDelayLimit = 500
+      }
+	  if (game.stat.level >= 10 && game.musicProgression < 1 && 
+	  game.settings.rotationSystem !== "heboris"
+	  ) {
+		if (game.stat.piece > 0 || game.timePassed > 0) {
+          sound.killBgm()
+          sound.playBgm(game.settings.music[1], game.type)
+		  game.musicProgression = 1
+        }
+      }
+      updateFallSpeed(game)
+      levelUpdate(game)
+    },
+    onInit: (game) => {
+      if (settings.game.marathon.lineGoal >= 0) {
+        game.lineGoal = settings.game.marathon.lineGoal
+      }
+	  if (game.settings.rotationSystem === "heboris") {
+		  game.settings.music = ["../heboris/hebo", "../heboris/hebo"]
+	  }
+	  game.makeSprite(
+		[
+			"red",
+			"orange",
+			"yellow",
+			"green",
+			"lightBlue",
+			"blue",
+			"purple",
+			"white",
+			"black",
+		],
+		["mino", "stack", "ghost"],
+		"deluxe"
+	  )
+	  game.hideGrid = true
+	  game.stack.updateGrid()
+	  game.colors = PIECE_COLORS.standard
+      game.stat.level = settings.game.monodx.startingLevel
+      lastLevel = parseInt(settings.game.monodx.startingLevel)
+      game.piece.gravity = 1000
+	  game.musicProgression = 0
+      updateFallSpeed(game)
+      game.updateStats()
+    },
+  },
+  nesmodern: {
+    update: (arg) => {
+      collapse(arg)
+	  if (arg.stack.levelUpAnimation < arg.stack.levelUpAnimationLimit) {
+        arg.stack.makeAllDirty()
+        arg.stack.isDirty = true
+        arg.stack.levelUpAnimation += arg.ms
+      }
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+        rotate(arg)
+        rotate180(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      softDropWithGravityOverride(arg, 33.33)
+      hardDrop(arg)
+      extendedLockdown(arg)
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+      /* Might use this code later
+      $('#das').max = arg.piece.dasLimit;
+      $('#das').value = arg.piece.das;
+      $('#das').style.setProperty('--opacity', ((arg.piece.arr >= arg.piece.arrLimit) || arg.piece.inAre) ? 1 : 0);
+      */
+    },
+    onPieceSpawn: (game) => {
+      game.stat.level = Math.max(
+		settings.game.mono.startingLevel,
+		Math.floor(game.stat.line / 10)
+	  )
+	  /*
+      const x = game.stat.level
+      const gravityEquation = (0.8 - x * 0.007) ** (x - 1)
+      game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+	  if (game.stat.level >= 20) {
+        game.piece.lockDelayLimit = ~~framesToMs(
+          30 * Math.pow(0.93, Math.pow(game.stat.level - 20, 0.8))
+        )
+      } else {
+        game.piece.lockDelayLimit = 500
+      }
+	  */
+	  const gravityTable = [
+        53, 49, 45, 41, 37, 33, 28, 22, 17, 11, 9, 8, 7, 6, 5, 4, 3, 1/3, 1/9, 1/20,
+      ]
+	  game.piece.gravity = framesToMs(gravityTable[Math.min(game.stat.level, 19)])
+	  if (game.stat.level >= 19) {
+        game.piece.lockDelayLimit = ~~framesToMs(
+          30 * Math.pow(0.93, Math.pow(game.stat.level - 19, 0.8))
+        )
+      } else {
+        game.piece.lockDelayLimit = 500
+      }
+	  /*
+	  if (game.stat.level >= 10 && game.musicProgression < 1 && 
+	  game.settings.rotationSystem !== "heboris"
+	  ) {
+		if (game.stat.piece > 0 || game.timePassed > 0) {
+          sound.killBgm()
+          sound.playBgm(game.settings.music[1], game.type)
+		  game.musicProgression = 1
+        }
+      }*/
+      updateFallSpeed(game)
+      levelUpdate(game)
+    },
+    onInit: (game) => {
+      if (settings.game.marathon.lineGoal >= 0) {
+        game.lineGoal = settings.game.marathon.lineGoal
+      }
+	  if (game.settings.rotationSystem === "heboris") {
+		  game.settings.music = ["../heboris/hebo", "../heboris/hebo"]
+	  }
+	  game.redrawOnLevelUp = true
+	  if (settings.settings.skin !== "auto") {
+        game.makeSprite(
+          [
+            "x-0",
+            "l-0",
+            "r-0",
+            "x-1",
+            "l-1",
+            "r-1",
+            "x-2",
+            "l-2",
+            "r-2",
+            "x-3",
+            "l-3",
+            "r-3",
+            "x-4",
+            "l-4",
+            "r-4",
+            "x-5",
+            "l-5",
+            "r-5",
+            "x-6",
+            "l-6",
+            "r-6",
+            "x-7",
+            "l-7",
+            "r-7",
+            "x-8",
+            "l-8",
+            "r-8",
+            "x-9",
+            "l-9",
+            "r-9",
+          ],
+          ["mino"],
+          "retro-special"
+        )
+        game.piece.useRetroColors = true
+        game.colors = PIECE_COLORS.retroSpecial
+      } else {
+        game.makeSprite(
+          [
+            "x-0",
+            "l-0",
+            "r-0",
+            "x-1",
+            "l-1",
+            "r-1",
+            "x-2",
+            "l-2",
+            "r-2",
+            "x-3",
+            "l-3",
+            "r-3",
+            "x-4",
+            "l-4",
+            "r-4",
+            "x-5",
+            "l-5",
+            "r-5",
+            "x-6",
+            "l-6",
+            "r-6",
+            "x-7",
+            "l-7",
+            "r-7",
+            "x-8",
+            "l-8",
+            "r-8",
+            "x-9",
+            "l-9",
+            "r-9",
+          ],
+          ["mino"],
+          "retro-special"
+        )
+        game.piece.useRetroColors = true
+        game.colors = PIECE_COLORS.retroSpecial
+      }
+      game.stack.levelUpAnimation = 1000
+      game.stack.levelUpAnimationLimit = 450
+	  game.hideGrid = true
+	  game.stack.updateGrid()
+	  game.colors = PIECE_COLORS.standard
+      game.stat.level = settings.game.monodx.startingLevel
+      lastLevel = parseInt(settings.game.monodx.startingLevel)
+      game.piece.gravity = 1000
+	  game.musicProgression = 0
+      updateFallSpeed(game)
+      game.updateStats()
+    },
+  },
   konoha: {
     update: (arg) => {
       const game = gameHandler.game
@@ -9435,6 +9712,45 @@ export const loops = {
 	  game.hideGrid = true
 	  game.stack.updateGrid()
 	  initMusicProgression(game)
+	  segaSkin = "sega"
+	  game.stack.flashLineClear = false
+	  if (game.settings.rotationSystem === "handheld") {
+		  game.colors = PIECE_COLORS.standard
+		  segaSkin = "handheld"
+		  game.stack.flashLineClear = true
+		  game.stack.flashClearRate = 200
+	  }
+	  if (game.settings.rotationSystem === "deluxe") {
+		  game.colors = PIECE_COLORS.standard
+		  segaSkin = "deluxe"
+		  game.stack.flashLineClear = true
+		  game.stack.flashClearRate = 200
+	  }
+	  if (game.settings.rotationSystem === "retro") {
+		  game.colors = PIECE_COLORS.retro
+		  segaSkin = "retro"
+		  game.stack.flashLineClear = false
+	  }
+	  if (game.settings.rotationSystem === "original") {
+		  game.colors = PIECE_COLORS.original
+		  segaSkin = "bone"
+		  game.stack.flashLineClear = false
+	  }
+	  game.makeSprite(
+		[
+			"red",
+			"orange",
+			"yellow",
+			"green",
+			"lightBlue",
+			"blue",
+			"purple",
+			"white",
+			"black",
+		],
+		["mino", "stack"],
+		segaSkin
+	  )
       game.stat.level = 0
       lastLevel = 0
 	  levelTimer = 0
@@ -9654,8 +9970,8 @@ export const loops = {
 	  ]
       game.piece.gravity = framesToMs(gravityTable[x])
       game.piece.lockDelayLimit = framesToMs(1)
-	  game.piece.boneColor = "green"
-	  game.piece.useBoneBlocks = true
+	  //game.piece.boneColor = "green"
+	  //game.piece.useBoneBlocks = true
 	  game.piece.ghostIsVisible = false
       updateFallSpeed(game)
       levelUpdate(game)
@@ -9664,8 +9980,8 @@ export const loops = {
       if (settings.game.terminal.lineGoal >= 0) {
         game.lineGoal = settings.game.terminal.lineGoal
       }
-	  game.piece.boneColor = "green"
-	  game.piece.useBoneBlocks = true
+	  //game.piece.boneColor = "green"
+	  //game.piece.useBoneBlocks = true
       game.stat.level = settings.game.terminal.startingLevel
       lastLevel = parseInt(settings.game.terminal.startingLevel)
       game.piece.gravity = framesToMs(60)
