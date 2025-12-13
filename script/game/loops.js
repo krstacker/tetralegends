@@ -3186,7 +3186,7 @@ export const loops = {
       }
 	  */
 	  const gravityTable = [
-        53, 49, 45, 41, 37, 33, 28, 22, 17, 11, 9, 8, 7, 6, 5, 4, 3, 1/3, 1/9, 1/20,
+        48, 43, 38, 33, 28, 23, 18, 13, 8, 7, 6, 5, 4, 3, 2, 1, 1/2, 1/4, 1/8, 1/20
       ]
 	  game.piece.gravity = framesToMs(gravityTable[Math.min(game.stat.level, 19)])
 	  if (game.stat.level >= 19) {
