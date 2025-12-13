@@ -8,7 +8,7 @@
     "randomizer": "bag",
     "rotationSystem": "srs",
     "skin": "handheld",
-    "soundbank": "mono",
+    "soundbank": "monodx",
     "music": ["monodx", "monodx-last"],
     "scoreTable": "guideline",
 	"disableDefaultSkinLoad": true,

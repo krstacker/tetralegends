@@ -14,7 +14,7 @@
       "stringDesc": "modernNesDescription",
 	  "langOverride": "ue_additions",
       "action": "submenu",
-      "submenu": "mode/modernnes"
+      "submenu": "mode/nesmodern"
     },
     {
       "string": "monoLabel",

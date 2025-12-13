@@ -3062,7 +3062,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       game.stat.level = Math.max(
-		settings.game.mono.startingLevel,
+		settings.game.monodx.startingLevel,
 		Math.floor(game.stat.line / 10)
 	  )
 	  /*
@@ -3169,7 +3169,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       game.stat.level = Math.max(
-		settings.game.mono.startingLevel,
+		settings.game.nesmodern.startingLevel,
 		Math.floor(game.stat.line / 10)
 	  )
 	  /*
@@ -3300,8 +3300,8 @@ export const loops = {
 	  game.hideGrid = true
 	  game.stack.updateGrid()
 	  game.colors = PIECE_COLORS.standard
-      game.stat.level = settings.game.monodx.startingLevel
-      lastLevel = parseInt(settings.game.monodx.startingLevel)
+      game.stat.level = settings.game.nesmodern.startingLevel
+      lastLevel = parseInt(settings.game.nesmodern.startingLevel)
       game.piece.gravity = 1000
 	  game.musicProgression = 0
       updateFallSpeed(game)
