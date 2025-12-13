@@ -3140,6 +3140,7 @@ export const loops = {
         arg.stack.makeAllDirty()
         arg.stack.isDirty = true
         arg.stack.levelUpAnimation += arg.ms
+		gameHandler.game.hold.isDirty = true
       }
       if (arg.piece.inAre) {
         initialDas(arg)
