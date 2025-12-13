@@ -5214,6 +5214,8 @@ export const loops = {
 	  }
       game.stat.level = 1
       lastLevel = 1
+	  game.hideGrid = true
+	  game.stack.updateGrid()
       game.piece.gravity = 1000
       updateFallSpeed(game)
       game.updateStats()
@@ -5953,6 +5955,8 @@ export const loops = {
       }
       game.stat.level = 1
       lastLevel = 1
+	  game.hideGrid = true
+	  game.stack.updateGrid()
       game.piece.gravity = 1000
       updateFallSpeed(game)
       game.updateStats()
@@ -9746,6 +9750,8 @@ export const loops = {
 	  testModeUpdate()
     },
     onInit: (game) => {
+	  game.hideGrid = true
+	  game.stack.updateGrid()
       game.stat.level = 0
       game.isRaceMode = true
 	  isEndRoll = false
