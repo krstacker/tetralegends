@@ -3219,6 +3219,18 @@ export const loops = {
 	  if (settings.settings.skin !== "auto") {
         game.makeSprite(
           [
+			"red",
+			"orange",
+			"yellow",
+			"green",
+			"lightBlue",
+			"blue",
+			"purple",
+			"white",
+			"black",
+			"x",
+			"l",
+			"r",
             "x-0",
             "l-0",
             "r-0",
@@ -3258,6 +3270,18 @@ export const loops = {
       } else {
         game.makeSprite(
           [
+			"red",
+			"orange",
+			"yellow",
+			"green",
+			"lightBlue",
+			"blue",
+			"purple",
+			"white",
+			"black",
+			"x",
+			"l",
+			"r",
             "x-0",
             "l-0",
             "r-0",
