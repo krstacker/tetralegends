@@ -1,7 +1,7 @@
 {
   "settings": {
     "width": 10,
-    "height": 18,
+    "height": 20,
     "hiddenHeight": 20,
     "pieces": "standard",
     "unfavored": "standardUnfavored",
@@ -24,7 +24,7 @@
     "nextLimit": 3
   },
   "stack": {
-    "flashLineClear": false,
+    "useMinoSkin": true,
     "flashOnTetris": true,
 	"flashOnSpin": true
   },

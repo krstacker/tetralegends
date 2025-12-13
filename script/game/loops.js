@@ -3140,7 +3140,6 @@ export const loops = {
         arg.stack.makeAllDirty()
         arg.stack.isDirty = true
         arg.stack.levelUpAnimation += arg.ms
-		gameHandler.game.hold.isDirty = true
       }
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -3208,6 +3207,7 @@ export const loops = {
       }*/
       updateFallSpeed(game)
       levelUpdate(game)
+	  game.hold.isDirty = true
     },
     onInit: (game) => {
 	  if (game.settings.rotationSystem === "heboris") {
@@ -3268,7 +3268,6 @@ export const loops = {
         )
         game.piece.useRetroColors = true
         game.colors = PIECE_COLORS.retroSpecial
-		game.stack.levelUpAnimationLimit = 450
       } else {
         game.makeSprite(
           [
@@ -3320,7 +3319,6 @@ export const loops = {
         )
         game.piece.useRetroColors = true
         game.colors = PIECE_COLORS.retroSpecial
-		game.stack.levelUpAnimationLimit = 450
       }
       game.stack.levelUpAnimation = 1000
       game.stack.levelUpAnimationLimit = 450
